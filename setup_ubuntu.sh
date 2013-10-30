@@ -1,17 +1,24 @@
 #!/usr/bin/env bash
 P_DIR=`pwd`
 
+# system update
 sudo apt-get update
 sudo apt-get upgrade -y
+
+# install stuff:
 sudo apt-get install -y git emacs24 rxvt-unicode-256color i3 python-virtualenv \
  subversion mercurial bzr chromium-browse tmux mc htop firefox pavucontroll \
  parcellite volumeicon pidgin sylpheed rxvt-unicode-256color feh \
  network-manager-gnome lxappearance
 
+# change default application
 sudo update-alternatives --config  x-www-browser
 sudo update-alternatives --config  x-terminal-emulator
 
-git clone https://github.com/beetleman/prelude.git  .emacs.d
+
+# setup emacs
+rm -r $HOME/.emacs.d
+git clone https://github.com/beetleman/prelude.git  $HOME/.emacs.d
 emacs&
 
 #setup BASH
