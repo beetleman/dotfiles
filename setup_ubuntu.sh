@@ -17,7 +17,7 @@ sudo update-alternatives --config  x-terminal-emulator
 
 
 # setup emacs
-rm -r $HOME/.emacs.d
+rm -rf $HOME/.emacs.d
 git clone https://github.com/beetleman/prelude.git  $HOME/.emacs.d
 emacs&
 
@@ -31,7 +31,7 @@ echo ". ~/.bash_config" >> $HOME/.bashrc
 
 #setup i3
 rm -rf $HOME/.i3
-ln -s $P_DIR/.i3 $HOME/.i3
+ln -s $P_DIR/i3 $HOME/.i3
 
 #setup git
 rm -f $HOME/.gitconfig
