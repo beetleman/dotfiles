@@ -10,6 +10,9 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $10 10: media
+set $9 9: mail
+set $8 8: im
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -106,16 +109,16 @@ bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+8 move container to workspace $8
+bindsym $mod+Shift+9 move container to workspace $9
+bindsym $mod+Shift+0 move container to workspace $10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+$mod+Shift+E exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -148,3 +151,50 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# frame with titlebar only if needed:
+new_window pixel 2
+new_float pixel 2
+
+# easy way t back to previous workspace
+workspace_auto_back_and_forth yes
+
+# focus follows mouse <yes|no>
+focus_follows_mouse no
+
+# Clients options:
+
+assign [class="Thunderbird"] $9
+assign [class="Sylpheed"] $9
+
+assign [title="ncmpcpp" class="URxvt"] $10
+assign [title="ncdc" class="URxvt"] $10
+assign [class="Skype"] $8
+assign [class="Pidgin"] $8
+
+for_window [class="mplayer2"] floating enable
+for_window [class="Vlc"] floating enable
+for_window [class="Kmix"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Smplayer"] floating enable
+
+
+for_window [class="Firefox" instance="Browser"] floating enable
+for_window [class="Firefox" instance="Dialog"] floating enable
+for_window [class="Firefox" instance="Extension"] floating enable
+for_window [class="Firefox" instance="Abp"] floating enable
+for_window [class="Firefox" instance="Febe"] floating enable
+
+# Autostart:
+exec start-pulseaudio-x11 
+exec setxkbmap  pl
+exec sh .fehbg
+exec ~/bin/dtella
+exec dunst
+exec urxvt -title ncdc -e ncdc
+exec urxvt -title ncmpcpp -e ncmpcpp
+exec parcellite
+exec volumeicon
+exec pidgin
+exec skype
+exec sylpheed
