@@ -1,0 +1,55 @@
+!===========URxvt============ URxvt.geometry: 80x22
+
+!URxvt*transparent: true
+
+! fade out if not focused
+!URxvt*fading: 20
+URxvt*cursorBlink: false
+! run "fc-list" for a list of available fonts
+URxvt*font: xft:Terminus:pixelsize=15
+! URxvt*linespace: 0
+URxvt*skipBuiltinGlyphs: true
+!URxvt*title: urxvt
+URxvt*termname: urxvt
+URxvt*scrollBar: False
+URxvt*scrollTtyOutput: False
+URxvt*scrollTtyKeypress: True
+URxvt*secondaryScroll: True
+URxvt*saveLines: 2048
+URxvt.depth: 32
+
+URxvt.perl-ext-common:  default,matcher
+URxvt.url-launcher:      /usr/bin/xdg-open
+URxvt.matcher.button:   1
+URxvt*underlineURLs: true
+
+! Colour scheme
+
+!FG, BG
+URxvt*background:       	#1E2320
+URxvt*foreground:       	#dcdccc
+URxvt*cursorColor:      	#CCCCCC
+URxvt*colorBD:          	#FFFFFF
+URxvt*colorUL:			#FFFF99
+URxvt*underlineColor:    	#9999FF
+
+! from http://xcolors.net/
+! Zenburn:
+
+URxvt*color0:  #1E2320
+URxvt*color1:  #705050
+URxvt*color2:  #60b48a
+URxvt*color3:  #dfaf8f
+URxvt*color4:  #506070
+URxvt*color5:  #dc8cc3
+URxvt*color6:  #8cd0d3
+URxvt*color7:  #dcdccc
+URxvt*color8:  #709080
+URxvt*color9:  #dca3a3
+URxvt*color10: #c3bf9f
+URxvt*color11: #f0dfaf
+URxvt*color12: #94bff3
+URxvt*color13: #ec93d3
+URxvt*color14: #93e0e3
+URxvt*color15: #ffffff
+
