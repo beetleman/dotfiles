@@ -198,3 +198,4 @@ exec volumeicon
 exec pidgin
 exec skype
 exec sylpheed
+exec nm-applet
