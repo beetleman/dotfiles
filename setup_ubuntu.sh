@@ -6,7 +6,7 @@ sudo apt-get upgrade -y
 sudo apt-get install -y git emacs24 rxvt-unicode-256color i3 python-virtualenv \
  subversion mercurial bzr chromium-browse tmux mc htop firefox pavucontroll \
  parcellite volumeicon pidgin sylpheed rxvt-unicode-256color feh \
- network-manager-gnome
+ network-manager-gnome lxappearance
 
 sudo update-alternatives --config  x-www-browser
 sudo update-alternatives --config  x-terminal-emulator
