@@ -27,7 +27,7 @@ do
     rm -f $HOME/$f
     ln $P_DIR/bash/$f $HOME/$f
 done
-echo ". ~/.bash_config" > $HOME/.bashrc
+echo ". ~/.bash_config" >> $HOME/.bashrc
 
 #setup i3
 rm -rf $HOME/.i3
