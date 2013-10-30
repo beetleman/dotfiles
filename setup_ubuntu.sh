@@ -9,7 +9,7 @@ sudo apt-get upgrade -y
 sudo apt-get install -y git emacs24 rxvt-unicode-256color i3 python-virtualenv \
     subversion mercurial bzr chromium-browser chromium-codecs-ffmpeg-extra \
     tmux htop firefox pavucontrol parcellite volumeicon-alsa pidgin sylpheed \
-    rxvt-unicode-256color feh mc network-manager-gnome
+    rxvt-unicode-256color feh mc network-manager-gnome light-themes
 
 # change default application
 sudo update-alternatives --config  x-www-browser
