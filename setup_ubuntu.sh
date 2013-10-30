@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-P_DIR = `pwd`
+P_DIR=`pwd`
 
 sudo apt-get update
 sudo apt-get upgrade -y
@@ -28,8 +28,17 @@ ln -s $P_DIR/.i3 $HOME/.i3
 
 #setup git
 rm -f $HOME/.gitconfig
-ln -s $P_DIR/git/.gitconfig  $HOME/.gitconfig
+ln $P_DIR/git/.gitconfig  $HOME/.gitconfig
 
 #setup Xresources
 rm -f $HOME/.Xresources
-ln -s $P_DIR/Xresources/.Xresources  $HOME/.Xresources
+ln $P_DIR/Xresources/.Xresources  $HOME/.Xresources
+
+#setup gtk2
+rm -f $HOME/.gtkrc-2.0
+ln  $P_DIR/gtk/.gtkrc-2.0  $HOME/.gtkrc-2.0
+
+#setup gtk3
+mkdir -p $HOME/.config/gtk-3.0
+rm -f $HOME/.config/gtk-3.0/settings.ini
+ln  $P_DIR/gtk/settings.ini $HOME/.config/gtk-3.0/settings.ini
