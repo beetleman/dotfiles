@@ -166,6 +166,7 @@ focus_follows_mouse no
 
 assign [class="Thunderbird"] $9
 assign [class="Sylpheed"] $9
+assign [class="Claws-mail"] $9
 
 
 assign [title="ncmpcpp" class="URxvt"] $10
