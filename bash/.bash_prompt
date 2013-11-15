@@ -1,8 +1,12 @@
 ################################
 #    Set up command prompt:    #
 ################################
-
+if [ -f /usr/lib/git-core/git-sh-prompt ]; then
 . /usr/lib/git-core/git-sh-prompt
+fi
+if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
+    . /usr/share/git-core/contrib/completion/git-prompt.sh
+fi
 
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
