@@ -118,8 +118,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-# bindsym $mod+Shift+E exit
-bindsym $mod+Shift+E exec xfce4-session-logout
+bindsym $mod+Shift+E exit
+# bindsym $mod+Shift+E exec xfce4-session-logout
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -158,10 +158,14 @@ new_float pixel 2
 
 #colors
 #class                          border          backgr.         text            indicator
-#client.focused                  #444444         #333333         #ffffff         #ffffff
-client.unfocused                #444444         #111111         #444444         #ffffff
-client.focused_inactive         #444444         #111111         #444444         #ffffff
-client.urgent                   #444444         #333333         #ff0000         #ffffff
+client.focused                  #66D9EF         #66D9EF         #272822         #A6E22E
+client.unfocused                #272822         #272822         #66D9EF         #A6E22E
+client.focused_inactive         #272822         #272822         #66D9EF         #A6E22E
+client.urgent                   #272822         #272822         #F92672         #A6E22E
+
+
+
+
 
 # easy way t back to previous workspace
 workspace_auto_back_and_forth yes
