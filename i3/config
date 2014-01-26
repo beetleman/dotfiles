@@ -150,6 +150,15 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status --config ~/.i3/i3status.conf
+        colors {
+                separator #666666
+                background #222222
+                statusline #dddddd
+                focused_workspace #0088CC #0088CC #ffffff
+                active_workspace #333333 #333333 #ffffff
+                inactive_workspace #333333 #333333 #888888
+                urgent_workspace #2f343a #900000 #ffffff
+        }
 }
 
 # frame with titlebar only if needed:
@@ -158,11 +167,10 @@ new_float pixel 2
 
 #colors
 #class                          border          backgr.         text            indicator
-client.focused                  #66D9EF         #66D9EF         #272822         #A6E22E
-client.unfocused                #272822         #272822         #66D9EF         #A6E22E
-client.focused_inactive         #272822         #272822         #66D9EF         #A6E22E
-client.urgent                   #272822         #272822         #F92672         #A6E22E
-
+client.focused                  #0088CC         #0088CC         #ffffff         #dddddd
+client.focused_inactive         #333333         #333333         #888888         #292d2e
+client.unfocused                #333333         #333333         #888888         #292d2e
+client.urgent                   #2f343a         #900000         #ffffff         #900000
 
 
 
