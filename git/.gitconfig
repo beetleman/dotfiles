@@ -3,3 +3,5 @@
 	name = beetleman
 [push]
 	default = simple
+[merge]
+	tool = kdiff3
