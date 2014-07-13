@@ -11,8 +11,16 @@
 
 set $mod Mod4
 set $10 10: media
-set $9 9: mail
-set $8 8: im
+set $09 9: mail
+set $08 8: im
+set $07 7
+set $06 6
+set $05 5
+set $04 4: terminals
+set $03 3: preview/web
+set $02 2: devel
+set $01 1: doc/web
+
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -90,27 +98,27 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace $8
-bindsym $mod+9 workspace $9
+bindsym $mod+1 workspace $01
+bindsym $mod+2 workspace $02
+bindsym $mod+3 workspace $03
+bindsym $mod+4 workspace $04
+bindsym $mod+5 workspace $05
+bindsym $mod+6 workspace $06
+bindsym $mod+7 workspace $07
+bindsym $mod+8 workspace $08
+bindsym $mod+9 workspace $09
 bindsym $mod+0 workspace $10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace $8
-bindsym $mod+Shift+9 move container to workspace $9
+bindsym $mod+Shift+1 move container to workspace $01
+bindsym $mod+Shift+2 move container to workspace $02
+bindsym $mod+Shift+3 move container to workspace $03
+bindsym $mod+Shift+4 move container to workspace $04
+bindsym $mod+Shift+5 move container to workspace $05
+bindsym $mod+Shift+6 move container to workspace $06
+bindsym $mod+Shift+7 move container to workspace $07
+bindsym $mod+Shift+8 move container to workspace $08
+bindsym $mod+Shift+9 move container to workspace $09
 bindsym $mod+Shift+0 move container to workspace $10
 
 # reload the configuration file
@@ -184,15 +192,15 @@ focus_follows_mouse no
 
 # Clients options:
 
-assign [class="Thunderbird"] $9
-assign [class="Sylpheed"] $9
-assign [class="Claws-mail"] $9
+assign [class="Thunderbird"] $09
+assign [class="Sylpheed"] $09
+assign [class="Claws-mail"] $09
 
 
 assign [title="ncmpcpp" class="URxvt"] $10
 assign [title="ncdc" class="URxvt"] $10
-assign [class="Skype"] $8
-assign [class="Pidgin"] $8
+assign [class="Skype"] $08
+assign [class="Pidgin"] $08
 
 for_window [class="mplayer2"] floating enable
 for_window [class="Vlc"] floating enable
@@ -208,16 +216,18 @@ for_window [class="Firefox" instance="Abp"] floating enable
 for_window [class="Firefox" instance="Febe"] floating enable
 
 # Autostart:
+exec dunst
+exec sh .fehbg
+exec /usr/libexec/lxpolkit
 exec start-pulseaudio-x11 
 exec setxkbmap  pl
-exec sh .fehbg
-exec ~/bin/dtella
-exec dunst
-exec urxvt -title ncdc -e ncdc
 exec urxvt -title ncmpcpp -e ncmpcpp
 exec parcellite
-exec volumeicon
 exec pidgin
 exec skype
-exec sylpheed
+exec thunderbird
 exec nm-applet
+exec firewall-applet
+exec volumeicon
+exec ~/.mpd/mpd.sh
+
