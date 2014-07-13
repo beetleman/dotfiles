@@ -193,12 +193,7 @@ focus_follows_mouse no
 # Clients options:
 
 assign [class="Thunderbird"] $09
-assign [class="Sylpheed"] $09
-assign [class="Claws-mail"] $09
 
-
-assign [title="ncmpcpp" class="URxvt"] $10
-assign [title="ncdc" class="URxvt"] $10
 assign [class="Skype"] $08
 assign [class="Pidgin"] $08
 
@@ -221,13 +216,9 @@ exec sh .fehbg
 exec /usr/libexec/lxpolkit
 exec start-pulseaudio-x11 
 exec setxkbmap  pl
-exec urxvt -title ncmpcpp -e ncmpcpp
 exec parcellite
 exec pidgin
-exec skype
 exec thunderbird
 exec nm-applet
 exec firewall-applet
 exec volumeicon
-exec ~/.mpd/mpd.sh
-
