@@ -61,5 +61,6 @@ stjerm.background:          #1E2320
 stjerm.foreground:          #dcdccc
 stjerm.cursorColor:         #CCCCCC
 stjerm.height:              40%
-stjerm.width:               100%
+stjerm.width:               95%
 stjerm.tabpos:              top
+stjerm.border:              thin

@@ -204,6 +204,8 @@ for_window [class="Firefox" instance="Extension"] floating enable
 for_window [class="Firefox" instance="Abp"] floating enable
 for_window [class="Firefox" instance="Febe"] floating enable
 
+for_window [class="Stjerm" instance="stjerm"] floating enable
+
 # Autostart:
 exec dunst
 exec sh .fehbg
@@ -217,6 +219,7 @@ exec nm-applet
 exec firewall-applet
 exec volumeicon
 exec emacs --daemon
+exec stjerm
 
 # color themes:
 
