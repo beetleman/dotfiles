@@ -53,6 +53,9 @@ bindsym $mod+shift+Return exec $editor
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# lock session
+bindsym Break exec i3lock
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
