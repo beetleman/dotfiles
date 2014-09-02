@@ -4,4 +4,6 @@
 [push]
 	default = simple
 [merge]
-	tool = kdiff3
+	tool = meld
+[diff]
+	tool = meld

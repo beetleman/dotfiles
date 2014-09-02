@@ -54,8 +54,7 @@ URxvt*color14: #93e0e3
 URxvt*color15: #ffffff
 
 !! Stjerm
-stjerm.key:                 grave
-stjerm.mod:                 windows
+stjerm.key:                 f12
 stjerm.font:                Terminus 11
 stjerm.background:          #1E2320
 stjerm.foreground:          #dcdccc

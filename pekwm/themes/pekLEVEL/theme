@@ -1,0 +1,345 @@
+############################################################
+# "pekLEVEL" for pekwm 0.1.17 
+#  by maxim (http://maxim2.deviantart.com)
+#  Date: March 15, 2014
+############################################################
+
+# WINDOW BORDERS ###########################################
+
+$FONT = "MANTEKA-6Left#XFT"
+
+PDecor {
+
+  Decor = "Default" {
+
+# Titlebar
+    Title {
+      Height = "14"
+      Pad = "1 1 2 2"
+
+      Focused = "SOLID #151515 2x14"
+      Unfocused = "SOLID #151515 2x14"
+
+# Titlebar Tabs
+      Tab {
+        Focused = "SOLID #151515 2x14"
+        FocusedSelected = "SOLID #151515 2x14"
+        Unfocused = "SOLID #151515 2x14"
+        UnfocusedSelected = "SOLID #151515 2x14"
+      }
+
+      Separator {
+        Focused = "Empty"
+        Unfocused = "Empty"
+      }
+
+      Font {
+        Focused = "$FONT"
+      }
+
+      FontColor {
+        Focused = "#707070"
+        FocusedSelected = "#707070"
+        Unfocused = "#151515"
+        UnfocusedSelected = "#151515"
+      }
+
+# Titlebar Buttons
+      Buttons {
+        
+      # Close
+        Right {
+          Focused = "SOLID #39404A 15x6"
+          Unfocused = "SOLID #151515 15x6"
+          Pressed = "SOLID #151515 15x6"
+          Button = "1" { Actions = "Close" }
+          Button = "3" { Actions = "Kill" }
+        }
+
+      # Maximize
+        Right {
+          Focused = "SOLID #39404A 15x6"
+          Unfocused = "SOLID #151515 15x6"
+          Pressed = "SOLID #151515 15x6"
+          Button = "1" { Actions = "Toggle Maximized 1 1" }
+        }
+
+      # Minimize
+        Right {
+          Focused = "SOLID #39404A 15x6"
+          Unfocused = "SOLID #151515 15x6"
+          Pressed = "SOLID #151515 15x6"
+          Button = "1" { Actions = "Set Iconified" }
+        }
+      }
+      
+# Window Border
+      Border {
+
+      # Active Window
+        Focused {
+          TopLeft = "SOLID #3C3F48 4x15"
+          Top = "SOLID #151515 1x1"
+          TopRight = "SOLID #151515 4x15"
+          Left =  "SOLID #3C3F48 4x2"
+          Right = "SOLID #151515 4x2"
+          BottomLeft = "SOLID #3C3F48 4x4"
+          Bottom = "SOLID #151515 2x4"
+          BottomRight = "SOLID #151515 4x4"
+        }
+
+      # Inactive Window
+        Unfocused {
+          TopLeft = "SOLID #3C3F48 4x15"
+          Top = "SOLID #151515 1x1"
+          TopRight = "SOLID #151515 4x15"
+          Left =  "SOLID #3C3F48 4x2"
+          Right = "SOLID #151515 4x2"
+          BottomLeft = "SOLID #3C3F48 4x4"
+          Bottom = "SOLID #151515 2x4"
+          BottomRight = "SOLID #151515 4x4"
+        }
+      }
+    }
+  }
+
+# MENU #####################################################
+
+  Decor = "Menu" {
+    Title {
+      Height = "0"
+      Pad = "0 0 0 0"
+    
+      Focused = "Empty"
+      Unfocused = "Empty"
+
+      Tab {
+        Focused = "Empty"
+        FocusedSelected = "Empty"
+        Unfocused = "Empty"
+        UnfocusedSelected = "Empty"  
+      }
+
+      Separator {
+        Focused = "Empty"
+        Unfocused = "Empty"
+      }       
+        
+      Font {
+        Focused = "$FONT"
+      }
+        
+      FontColor {
+        Focused = "Empty"
+        FocusedSelected = "Empty"  
+        Unfocused = "Empty"
+        UnfocusedSelected = "Empty" 
+      }
+        
+      Buttons {
+      }
+      
+      Border {
+        Focused {
+          TopLeft = "IMAGE tlm.png"
+          Top = "IMAGE tm.png"
+          TopRight = "IMAGE trm.png"
+          Left =  "IMAGE lm.png"
+          Right = "IMAGE rm.png"
+          BottomLeft = "IMAGE blm.png"
+          Bottom = "IMAGE bm.png"
+          BottomRight = "IMAGE brm.png"
+        }
+        
+        Unfocused {
+          TopLeft = "IMAGE tlm.png"
+          Top = "IMAGE tm.png"
+          TopRight = "IMAGE trm.png"
+          Left =  "IMAGE lm.png"
+          Right = "IMAGE rm.png"
+          BottomLeft = "IMAGE blm.png"
+          Bottom = "IMAGE bm.png"
+          BottomRight = "IMAGE brm.png"
+        }
+      }
+    }   
+  }
+
+  Decor = "Titlebarless" {
+    Title {
+      Focused = "Empty"
+      Unfocused = "Empty"
+
+      Tab {
+        Focused = "Empty"
+        FocusedSelected = "Empty"
+        Unfocused = "Empty"
+        UnfocusedSelected = "Empty"
+      }
+
+      Separator {
+        Focused = "Empty"
+        Unfocused = "Empty"
+      }
+      
+      Font {
+        Focused = "Empty"
+      }
+      
+      FontColor {
+        Focused = "Empty"
+        FocusedSelected = "Empty"
+        Unfocused = "Empty"
+        UnfocusedSelected = "Empty"
+      }    
+    
+      Border {
+        Focused {
+          TopLeft = "Empty"
+          Top = "Empty"
+          TopRight = "Empty"
+          Left =  "Empty"
+          Right = "Empty"
+          BottomLeft = "Empty"
+          Bottom = "Empty"
+          BottomRight = "Empty"
+        }
+        
+        Unfocused {
+          TopLeft = "Empty"           
+          Top = "Empty"           
+          TopRight = "Empty"           
+          Left =  "Empty"           
+          Right = "Empty"           
+          BottomLeft = "Empty"           
+          Bottom = "Empty"           
+          BottomRight = "Empty"
+        }
+      }
+    }
+  }
+
+  Decor = "Statuswindow" {
+    Title {
+      Height = "0"
+      Pad = "0 0 0 0"
+
+      Focused = "Empty"
+      Unfocused = "Empty"
+  
+      Tab {
+        Focused = "Empty"
+        FocusedSelected = "Empty"
+        Unfocused = "Empty"
+        UnfocusedSelected = "Empty"
+      }
+      
+      Separator {
+        Focused = "Empty"
+        Unfocused = "Empty"
+      }
+      
+      Font {
+        Focused = "Empty"
+      }
+      
+      FontColor {
+        Focused = "Empty"
+        FocusedSelected = "Empty"
+        Unfocused = "Empty"
+        UnfocusedSelected = "Empty"
+      }
+      
+      Buttons {
+      }
+      
+      Border {  
+        Focused {
+          TopLeft = "Empty"
+          Top = "Empty"
+          TopRight = "Empty"
+          Left =  "Empty"
+          Right = "Empty"
+          BottomLeft = "Empty"
+          Bottom = "Empty"
+          BottomRight = "Empty"
+        }
+      
+        Unfocused {
+          TopLeft = "Empty"
+          Top = "Empty"
+          TopRight = "Empty"
+          Left = "Empty"
+          Right = "Empty"
+          BottomLeft = "Empty"
+          Bottom = "Empty"
+          BottomRight = "Empty"
+        }
+      }
+    }
+  }
+}
+
+Harbour {
+  Texture = "SOLID #151515"
+}
+
+# MENU #####################################################
+
+Menu {
+  Pad = "2 0 4 4" 
+
+  Focused {
+    Font = "$FONT"
+    Background = "SOLID #151515"
+    Item = "Empty"
+    Text = "#39404A" 
+    Separator = "IMAGE menuline.png#Scaled"
+    Arrow = "SOLID #39404A 5x1"
+  }
+
+  Unfocused {
+    Font = "$FONT"
+    Background = "SOLID #151515"
+    Item = "Empty"
+    Text = "#39404A" 
+    Separator = "IMAGE menuline.png#Scaled"
+    Arrow = "SOLID #39404A 5x1"
+  }
+  
+  Selected {
+    Font = "$FONT"
+    Background = "SOLID #151515"
+    Item = "Empty"
+    Text = "#566272"
+    Arrow = "SOLID #566272 5x1"
+  }
+}
+
+# CMD WINDOW ###############################################
+
+CmdDialog {
+  Font = "$FONT"
+  Texture = "SOLID #151515"
+  Text = "#707070"
+  Pad = "5 5 1 1"
+}
+
+Status {
+  Font = "$FONT"
+  Texture = "SOLID #151515" 
+  Text = "#707070"
+  Pad = "0 1 4 4"
+}
+
+# WORKSPACE WINDOW #########################################
+
+WorkspaceIndicator {
+  Font = "$FONT"
+  Background = "SOLID #151515"
+  Workspace = "SOLID #181818"
+  WorkspaceActive = "SOLID #39404A"
+  WorkspacePadding = "2"
+  EdgePadding = "2"
+  Text = "#707070"
+}

@@ -8,10 +8,13 @@
 
 
 # general path:
-PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/node_modules/.bin
+PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/node_modules/.bin/
 
 # andorind sdk path:
 PATH=$PATH:$HOME/opt/android/sdk/tools/:$HOME/opt/android/sdk/platform-tools/
+
+# node path
+PATH=$PATH:$HOME/opt/node/bin/
 
 export PATH
 
