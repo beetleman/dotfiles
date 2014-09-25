@@ -216,7 +216,7 @@ focus_follows_mouse no
 
 # Clients options:
 
-assign [class="Thunderbird"] $09
+assign [class="Claws-mail"] $09
 
 assign [class="Skype"] $08
 assign [class="Pidgin"] $08
@@ -249,7 +249,7 @@ exec start-pulseaudio-x11
 exec setxkbmap  pl
 exec parcellite
 exec pidgin
-exec thunderbird
+exec claws-mail
 exec nm-applet
 exec firewall-applet
 exec volumeicon
