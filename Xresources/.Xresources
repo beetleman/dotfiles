@@ -23,6 +23,15 @@ URxvt.url-launcher:      /usr/bin/xdg-open
 URxvt.matcher.button:   1
 URxvt*underlineURLs: true
 
+!! Stjerm
+stjerm.key:                 grave
+stjerm.mod:                 windows
+stjerm.font:                Terminus 11
+stjerm.height:              40%
+stjerm.width:               95%
+stjerm.tabpos:              top
+stjerm.border:              thin
+
 ! Colour scheme
 
 !FG, BG
@@ -53,14 +62,27 @@ URxvt*color13: #ec93d3
 URxvt*color14: #93e0e3
 URxvt*color15: #ffffff
 
-!! Stjerm
-stjerm.key:                 grave
-stjerm.mod:                 windows
-stjerm.font:                Terminus 11
-stjerm.background:          #1E2320
-stjerm.foreground:          #dcdccc
-stjerm.cursorColor:         #CCCCCC
-stjerm.height:              40%
-stjerm.width:               95%
-stjerm.tabpos:              top
-stjerm.border:              thin
+!FG, BG
+stjerm*background:       	#1E2320
+stjerm*foreground:       	#dcdccc
+stjerm*cursorColor:      	#CCCCCC
+
+! from http://xcolors.net/
+! Zenburn:
+
+stjerm*color0:  #1E2320
+stjerm*color1:  #705050
+stjerm*color2:  #60b48a
+stjerm*color3:  #dfaf8f
+stjerm*color4:  #506070
+stjerm*color5:  #dc8cc3
+stjerm*color6:  #8cd0d3
+stjerm*color7:  #dcdccc
+stjerm*color8:  #709080
+stjerm*color9:  #dca3a3
+stjerm*color10: #c3bf9f
+stjerm*color11: #f0dfaf
+stjerm*color12: #94bff3
+stjerm*color13: #ec93d3
+stjerm*color14: #93e0e3
+stjerm*color15: #ffffff
