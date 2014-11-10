@@ -194,13 +194,13 @@ bindsym $mod+r mode "resize"
 bar {
   status_command i3status --config ~/.i3/i3status.conf
   colors {
-    separator #888888
-    background #333333
-    statusline #FFFFFF
-    focused_workspace #4E9C00 #4E9C00 #FFFFFF
-    active_workspace #333333 #333333 #FFFFFF
+    separator #444444
+    background #222222
+    statusline #666666
+    focused_workspace #d70a53 #d70a53 #ffffff
+    active_workspace #333333 #333333 #888888
     inactive_workspace #333333 #333333 #888888
-    urgent_workspace #C20000 #C20000 #FFFFFF
+    urgent_workspace #eb709b #eb709b #ffffff
   }
 }
 
@@ -259,8 +259,7 @@ exec quodlibet
 exec xset -dpms; xset s off
 
 # color themes:
-
-client.focused #4E9C00 #4E9C00 #FFFFFF #FFFFFF
-client.focused_inactive #1B3600 #1B3600 #888888 #FFFFFF
-client.unfocused #333333 #333333 #888888 #FFFFFF
-client.urgent #C20000 #C20000 #FFFFFF #FFFFFF
+client.focused #d70a53 #d70a53 #ffffff #8c0333
+client.focused_inactive #333333 #333333 #888888 #333333
+client.unfocused #333333 #333333 #888888 #333333
+client.urgent #eb709b #eb709b #ffffff #eb709b
