@@ -216,7 +216,7 @@ focus_follows_mouse no
 
 # Clients options:
 
-assign [class="Claws-mail"] $09
+assign [class="Thunderbird"] $09
 
 assign [class="Skype"] $08
 assign [class="Pidgin"] $08
@@ -249,13 +249,14 @@ exec start-pulseaudio-x11
 exec setxkbmap  pl
 exec parcellite
 exec pidgin
-exec claws-mail
+exec thunderbird
 exec nm-applet
 exec firewall-applet
 exec volumeicon
 exec emacs --daemon
 exec stjerm
 exec quodlibet
+exec xset -dpms; xset s off
 
 # color themes:
 
