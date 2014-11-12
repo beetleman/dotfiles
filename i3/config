@@ -256,6 +256,7 @@ exec volumeicon
 exec emacs --daemon
 exec stjerm
 exec quodlibet
+exec redshift
 exec xset -dpms; xset s off
 
 # color themes:
