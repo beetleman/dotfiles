@@ -1,5 +1,5 @@
 [user]
-	email = nigrantis.tigris@gmial.com
+	email = mateusz.probachta@gmail.com
 	name = beetleman
 [push]
 	default = simple
@@ -7,3 +7,4 @@
 	tool = meld
 [diff]
 	tool = meld
+
