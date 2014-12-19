@@ -3,86 +3,123 @@
 !URxvt*transparent: true
 
 ! fade out if not focused
-!URxvt*fading: 20
-URxvt*cursorBlink: false
+!URxvt.fading: 20
+URxvt.cursorBlink: false
 ! run "fc-list" for a list of available fonts
-URxvt*font: xft:Terminus:pixelsize=15
+URxvt.font: xft:Terminus:pixelsize=16
 ! URxvt*linespace: 0
-URxvt*skipBuiltinGlyphs: true
+URxvt.skipBuiltinGlyphs: true
 !URxvt*title: urxvt
-URxvt*termname: urxvt
-URxvt*scrollBar: False
-URxvt*scrollTtyOutput: False
-URxvt*scrollTtyKeypress: True
-URxvt*secondaryScroll: True
-URxvt*saveLines: 2048
+URxvt.termname: urxvt
+URxvt.scrollBar: False
+URxvt.scrollTtyOutput: False
+URxvt.scrollTtyKeypress: True
+URxvt.secondaryScroll: True
+URxvt.saveLines: 2048
 URxvt.depth: 32
 
-URxvt.perl-ext-common:  default,matcher
-URxvt.url-launcher:      /usr/bin/xdg-open
-URxvt.matcher.button:   1
-URxvt*underlineURLs: true
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.underlineURLs: true
 
 !! Stjerm
 stjerm.key:                 grave
 stjerm.mod:                 windows
-stjerm.font:                Terminus 11
+stjerm.font:                Terminus 12
 stjerm.height:              40%
 stjerm.width:               95%
 stjerm.tabpos:              top
 stjerm.border:              thin
 
 ! Colour scheme
+! Common
 
-!FG, BG
-URxvt*background:       	#1E2320
-URxvt*foreground:       	#dcdccc
-URxvt*cursorColor:      	#CCCCCC
-URxvt*colorBD:          	#FFFFFF
-URxvt*colorUL:			#FFFF99
-URxvt*underlineColor:    	#9999FF
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
 
-! from http://xcolors.net/
-! Zenburn:
 
-URxvt*color0:  #1E2320
-URxvt*color1:  #705050
-URxvt*color2:  #60b48a
-URxvt*color3:  #dfaf8f
-URxvt*color4:  #506070
-URxvt*color5:  #dc8cc3
-URxvt*color6:  #8cd0d3
-URxvt*color7:  #dcdccc
-URxvt*color8:  #709080
-URxvt*color9:  #dca3a3
-URxvt*color10: #c3bf9f
-URxvt*color11: #f0dfaf
-URxvt*color12: #94bff3
-URxvt*color13: #ec93d3
-URxvt*color14: #93e0e3
-URxvt*color15: #ffffff
+! Dark
 
-!FG, BG
-stjerm*background:       	#1E2320
-stjerm*foreground:       	#dcdccc
-stjerm*cursorColor:      	#CCCCCC
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
 
-! from http://xcolors.net/
-! Zenburn:
 
-stjerm*color0:  #1E2320
-stjerm*color1:  #705050
-stjerm*color2:  #60b48a
-stjerm*color3:  #dfaf8f
-stjerm*color4:  #506070
-stjerm*color5:  #dc8cc3
-stjerm*color6:  #8cd0d3
-stjerm*color7:  #dcdccc
-stjerm*color8:  #709080
-stjerm*color9:  #dca3a3
-stjerm*color10: #c3bf9f
-stjerm*color11: #f0dfaf
-stjerm*color12: #94bff3
-stjerm*color13: #ec93d3
-stjerm*color14: #93e0e3
-stjerm*color15: #ffffff
+! Light
+
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+! URxvt*background:            S_base03
+
+! URxv
+URxvt.background:              S_base03
+URxvt.foreground:              S_base0
+; URxvt.fading:                  40
+; URxvt.fadeColor:               S_base03
+URxvt.cursorColor:             S_base1
+URxvt.pointerColorBackground:  S_base01
+URxvt.pointerColorForeground:  S_base1
+
+URxvt.color0:                  S_base02
+URxvt.color1:                  S_red
+URxvt.color2:                  S_green
+URxvt.color3:                  S_yellow
+URxvt.color4:                  S_blue
+URxvt.color5:                  S_magenta
+URxvt.color6:                  S_cyan
+URxvt.color7:                  S_base2
+URxvt.color8:                  S_base03
+URxvt.color9:                  S_orange
+URxvt.color10:                 S_base01
+URxvt.color11:                 S_base00
+URxvt.color12:                 S_base0
+URxvt.color13:                 S_violet
+URxvt.color14:                 S_base1
+URxvt.color15:                 S_base3
+
+!stjterm
+stjerm.background:              S_base03
+stjerm.foreground:              S_base0
+stjerm.cursorColor:             S_base1
+stjerm.pointerColorBackground:  S_base01
+stjerm.pointerColorForeground:  S_base1
+
+stjerm.color0:                  S_base02
+stjerm.color1:                  S_red
+stjerm.color2:                  S_green
+stjerm.color3:                  S_yellow
+stjerm.color4:                  S_blue
+stjerm.color5:                  S_magenta
+stjerm.color6:                  S_cyan
+stjerm.color7:                  S_base2
+stjerm.color8:                  S_base03
+stjerm.color9:                  S_orange
+stjerm.color10:                 S_base01
+stjerm.color11:                 S_base00
+stjerm.color12:                 S_base0
+stjerm.color13:                 S_violet
+stjerm.color14:                 S_base1
+stjerm.color15:                 S_base3
