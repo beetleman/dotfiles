@@ -257,9 +257,8 @@ exec volumeicon
 exec emacs --daemon
 exec stjerm
 exec quodlibet
-exec redshift
 exec xset -dpms; xset s off
-
+exec xrdb -merge ~/.Xresources
 # color themes:
 
 client.focused #859900 #859900 #fdf6e3 #859900
