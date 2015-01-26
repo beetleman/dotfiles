@@ -3,13 +3,13 @@
 !URxvt*transparent: true
 
 ! fade out if not focused
-!URxvt.fading: 20
+! URxvt.fading: 20
 URxvt.cursorBlink: false
 ! run "fc-list" for a list of available fonts
 URxvt.font: xft:Terminus:pixelsize=16
 ! URxvt*linespace: 0
 URxvt.skipBuiltinGlyphs: true
-!URxvt*title: urxvt
+! URxvt*title: urxvt
 URxvt.termname: urxvt
 URxvt.scrollBar: False
 URxvt.scrollTtyOutput: False
@@ -47,26 +47,26 @@ stjerm.border:              thin
 
 ! Dark
 
-#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
+! #define S_base03        #002b36
+! #define S_base02        #073642
+! #define S_base01        #586e75
+! #define S_base00        #657b83
+! #define S_base0         #839496
+! #define S_base1         #93a1a1
+! #define S_base2         #eee8d5
+! #define S_base3         #fdf6e3
 
 
 ! Light
 
-! #define S_base03        #fdf6e3
-! #define S_base02        #eee8d5
-! #define S_base01        #93a1a1
-! #define S_base00        #839496
-! #define S_base0         #657b83
-! #define S_base1         #586e75
-! #define S_base2         #073642
-! #define S_base3         #002b36
+#define S_base03        #fdf6e3
+#define S_base02        #eee8d5
+#define S_base01        #93a1a1
+#define S_base00        #839496
+#define S_base0         #657b83
+#define S_base1         #586e75
+#define S_base2         #073642
+#define S_base3         #002b36
 
 
 ! To only apply colors to your terminal, for example, prefix
@@ -77,8 +77,8 @@ stjerm.border:              thin
 ! URxv
 URxvt.background:              S_base03
 URxvt.foreground:              S_base0
-; URxvt.fading:                  40
-; URxvt.fadeColor:               S_base03
+! URxvt.fading:                  40
+! URxvt.fadeColor:               S_base03
 URxvt.cursorColor:             S_base1
 URxvt.pointerColorBackground:  S_base01
 URxvt.pointerColorForeground:  S_base1
