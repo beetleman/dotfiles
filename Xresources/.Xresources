@@ -41,93 +41,46 @@ stjerm.tabpos:              top
 stjerm.border:              thin
 
 ! Colour scheme
-! Common
 
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
+!================================
+! tango theme
+!================================
 
-
-! Dark
-
-! #define S_base03        #002b36
-! #define S_base02        #073642
-! #define S_base01        #586e75
-! #define S_base00        #657b83
-! #define S_base0         #839496
-! #define S_base1         #93a1a1
-! #define S_base2         #eee8d5
-! #define S_base3         #fdf6e3
-
-
-! Light
-
-#define S_base03        #fdf6e3
-#define S_base02        #eee8d5
-#define S_base01        #93a1a1
-#define S_base00        #839496
-#define S_base0         #657b83
-#define S_base1         #586e75
-#define S_base2         #073642
-#define S_base3         #002b36
+URxvt.background:              #000000
+URxvt.foreground:              #babdb6
+URxvt.color0:                  #2e3436
+URxvt.color1:                  #cc0000
+URxvt.color2:                  #4e9a06
+URxvt.color3:                  #c4a000
+URxvt.color4:                  #3465a4
+URxvt.color5:                  #75507b
+URxvt.color6:                  #06989a
+URxvt.color7:                  #d3d7cf
+URxvt.color8:                  #555753
+URxvt.color9:                  #ef2929
+URxvt.color10:                 #8ae234
+URxvt.color11:                 #fce94f
+URxvt.color12:                 #729fcf
+URxvt.color13:                 #ad7fa8
+URxvt.color14:                 #34e2e2
+URxvt.color15:                 #eeeeec
 
 
-! To only apply colors to your terminal, for example, prefix
-! the color assignment statement with its name. Example:
-!
-! URxvt*background:            S_base03
-
-! URxv
-URxvt.background:              S_base03
-URxvt.foreground:              S_base0
-! URxvt.fading:                  40
-! URxvt.fadeColor:               S_base03
-URxvt.cursorColor:             S_base1
-URxvt.pointerColorBackground:  S_base01
-URxvt.pointerColorForeground:  S_base1
-
-URxvt.color0:                  S_base02
-URxvt.color1:                  S_red
-URxvt.color2:                  S_green
-URxvt.color3:                  S_yellow
-URxvt.color4:                  S_blue
-URxvt.color5:                  S_magenta
-URxvt.color6:                  S_cyan
-URxvt.color7:                  S_base2
-URxvt.color8:                  S_base03
-URxvt.color9:                  S_orange
-URxvt.color10:                 S_base01
-URxvt.color11:                 S_base00
-URxvt.color12:                 S_base0
-URxvt.color13:                 S_violet
-URxvt.color14:                 S_base1
-URxvt.color15:                 S_base3
-
-!stjterm
-stjerm.background:              S_base03
-stjerm.foreground:              S_base0
-stjerm.cursorColor:             S_base1
-stjerm.pointerColorBackground:  S_base01
-stjerm.pointerColorForeground:  S_base1
-
-stjerm.color0:                  S_base02
-stjerm.color1:                  S_red
-stjerm.color2:                  S_green
-stjerm.color3:                  S_yellow
-stjerm.color4:                  S_blue
-stjerm.color5:                  S_magenta
-stjerm.color6:                  S_cyan
-stjerm.color7:                  S_base2
-stjerm.color8:                  S_base03
-stjerm.color9:                  S_orange
-stjerm.color10:                 S_base01
-stjerm.color11:                 S_base00
-stjerm.color12:                 S_base0
-stjerm.color13:                 S_violet
-stjerm.color14:                 S_base1
-stjerm.color15:                 S_base3
+stjerm.background:              #000000
+stjerm.foreground:              #babdb6
+stjerm.color0:                  #2e3436
+stjerm.color1:                  #cc0000
+stjerm.color2:                  #4e9a06
+stjerm.color3:                  #c4a000
+stjerm.color4:                  #3465a4
+stjerm.color5:                  #75507b
+stjerm.color6:                  #06989a
+stjerm.color7:                  #d3d7cf
+stjerm.color8:                  #555753
+stjerm.color9:                  #ef2929
+stjerm.color10:                 #8ae234
+stjerm.color11:                 #fce94f
+stjerm.color12:                 #729fcf
+stjerm.color13:                 #ad7fa8
+stjerm.color14:                 #34e2e2
+stjerm.color15:                 #eeeeec
