@@ -221,6 +221,7 @@ assign [class="Thunderbird"] $09
 
 assign [class="Skype"] $08
 assign [class="Pidgin"] $08
+assign [title="Messenger"] $08
 
 assign [class="Quodlibet"] $10
 assign [class="Exfalso"] $10
@@ -251,6 +252,7 @@ exec start-pulseaudio-x11
 exec setxkbmap  pl
 exec parcellite
 exec pidgin
+exec messengerfordesktop
 exec thunderbird
 exec nm-applet
 exec firewall-applet
