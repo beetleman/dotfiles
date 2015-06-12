@@ -246,6 +246,7 @@ for_window [class="Stjerm" instance="stjerm"] floating enable
 exec dunst
 exec feh --bg-scale $background
 exec /usr/libexec/lxpolkit
+exec xfce4-power-manager
 exec start-pulseaudio-x11 
 exec setxkbmap  pl
 exec parcellite
