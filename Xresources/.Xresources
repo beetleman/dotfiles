@@ -38,6 +38,7 @@ stjerm.font:                Terminus 12
 stjerm.height:              40%
 stjerm.width:               95%
 stjerm.tabpos:              top
+stjerm.showtab:             always
 stjerm.border:              thin
 
 ! Colour scheme
