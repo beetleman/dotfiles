@@ -249,6 +249,7 @@ for_window [class="Firefox" instance="Febe"] floating enable
 for_window [class="Stjerm" instance="stjerm"] floating enable
 
 # Autostart:
+exec urxvtd -q -o
 exec dunst
 exec feh --bg-scale $background
 exec /usr/libexec/lxpolkit
