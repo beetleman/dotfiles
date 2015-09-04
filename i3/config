@@ -230,12 +230,12 @@ assign [title="Messenger"] $08
 
 assign [class="Quodlibet"] $10
 assign [class="Exfalso"] $10
-
+assign [class="Pavucontrol"] $10
+assign [class="Spotify"] $10
 
 for_window [class="mplayer2"] floating enable
 for_window [class="Vlc"] floating enable
 for_window [class="Kmix"] floating enable
-for_window [class="Pavucontrol"] floating enable
 for_window [class="Smplayer"] floating enable
 for_window [class="Exfalso"] floating enable
 
@@ -265,7 +265,7 @@ exec firewall-applet
 exec volumeicon
 exec emacs --daemon
 exec stjerm
-exec quodlibet
+exec spotify
 exec xset -dpms; xset s off
 exec xrdb -merge ~/.Xresources
 # color themes:
