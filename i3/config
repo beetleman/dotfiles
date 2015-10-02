@@ -258,17 +258,15 @@ exec start-pulseaudio-x11
 exec setxkbmap  pl
 exec parcellite
 exec pidgin
-exec messengerfordesktop
 exec thunderbird
 exec nm-applet
 exec firewall-applet
 exec volumeicon
 exec emacs --daemon
 exec stjerm
-exec spotify
 exec xset -dpms; xset s off
 exec xrdb -merge ~/.Xresources
-exec rofi -key-run F9 -key-window F12 -key-ssh F11
+
 # color themes:
 client.focused #3b1261 #3b1261 #ffffff #662b9c
 client.focused_inactive #333333 #5f676a #ffffff #484e50
