@@ -42,48 +42,58 @@ stjerm.border:              thin
 
 ! Colour scheme
 
-!================================
-! Zenburn Colors
-!================================
+!=====================================================
+! baskerville-ivorylight from http://www.xcolors.net/
+!=====================================================
 
-#define S_background     #1f1f1f
-#define S_foreground     #dcdccc
+#define S_background   #FEF9EC
+#define S_foreground   #6D727E
 
-! black + red
-#define S_color0         #1f1f1f
-#define S_color1         #705050
+#define S_colorBD      #3E424D
+#define S_colorIT      #3E424D
+#define S_colorUL      #3E424D
 
-! green + yellow
-#define S_color2         #60b48a
-#define S_color3         #dfaf8f
+#define S_cursorColor  #007693
 
-! blue + purple
-#define S_color4         #506070
-#define S_color5         #dc8cc3
+! BLACK
+#define S_color0       #C5C1B4
+#define S_color8       #A1A6B2
 
-! cyan + white
-#define S_color6         #8cd0d3
-#define S_color7         #dcdccc
+! WHITE
+#define S_color7       #3E424D
+#define S_color15      #282C36
 
-! bright-black + bright-red
-#define S_color8         #709080
-#define S_color9         #dca3a3
+! RED
+#define S_color1       #E75C58
+#define S_color9       #B22B31
 
-! bright-green + bright-yellow
-#define S_color10        #c3bf9f
-#define S_color11        #f0dfaf
+! YELLOW
+#define S_color3       #A08A00
+#define S_color11      #715F00
 
-! bright-blue + bright-purple
-#define S_color12        #94bff3
-#define S_color13        #ec93d3
+! GREEN
+#define S_color2       #00A250
+#define S_color10      #007427
 
-! bright-cyan + bright-white
-#define S_color14        #93e0e3
-#define S_color15        #ffffff
+! CYAN
+#define S_color6       #00A4C1
+#define S_color14      #007693
+
+! BLUE
+#define S_color4       #208FFB
+#define S_color12      #0065CA
+
+! MAGENTA
+#define S_color5       #D160C4
+#define S_color13      #A03196
 
 
 URxvt.background:      S_background
 URxvt.foreground:      S_foreground
+URxvt.cursorColor:     S_cursorColor
+URxvt.colorBD:         S_colorBD
+URxvt.colorIT:         S_colorIT
+URxvt.colorUL:         S_colorUL
 URxvt.color0:          S_color0
 URxvt.color1:          S_color1
 URxvt.color2:          S_color2
@@ -104,6 +114,10 @@ URxvt.color15:         S_color15
 
 stjerm.background:     S_background
 stjerm.foreground:     S_foreground
+stjerm.cursorColor:    S_cursorColor
+stjerm.colorBD:        S_colorBD
+stjerm.colorIT:        S_colorIT
+stjerm.colorUL:        S_colorUL
 stjerm.color0:         S_color0
 stjerm.color1:         S_color1
 stjerm.color2:         S_color2
