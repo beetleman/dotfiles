@@ -198,9 +198,28 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  status_command ~/.virtualenvs/i3wm/bin/python -c "from py3status import main; main()" --config ~/.i3/i3status.conf
+  status_command ~/.virtualenvs/i3wm/bin/python -c "from py3status import main; main()" --config ~/.i3/i3status-top.conf
 
   position top
+  id bar-top
+  workspace_buttons no
+  tray_output none
+  colors {
+    separator #666666
+    background #000000
+    statusline #ffffff
+    focused_workspace #551a8b #551a8b #ffffff
+    active_workspace #333333 #5f676a #ffffff
+    inactive_workspace #000000 #000000 #888888
+    urgent_workspace #2f343a #900000 #ffffff
+  }
+}
+
+bar {
+  #status_command ~/.virtualenvs/i3wm/bin/python -c "from py3status import main; main()" --config ~/.i3/i3status-bottom.conf
+
+  position bottom
+  id bar-bottom
   colors {
     separator #666666
     background #000000
