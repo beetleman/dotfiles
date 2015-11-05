@@ -1,10 +1,9 @@
 [user]
+	name = Mateusz Probachta (Beetleman)
 	email = mateusz.probachta@gmail.com
-	name = beetleman
 [push]
 	default = simple
 [merge]
 	tool = meld
 [diff]
 	tool = meld
-
