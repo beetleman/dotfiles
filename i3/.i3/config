@@ -276,12 +276,12 @@ exec xfce4-power-manager
 exec start-pulseaudio-x11 
 exec setxkbmap  pl
 exec parcellite
-exec pidgin
+# exec pidgin
 exec skype
 exec thunderbird
 exec nm-applet
 exec firewall-applet
-exec volumeicon
+exec sleep 2;volumeicon
 exec emacs --daemon
 exec stjerm
 exec xset -dpms; xset s off
