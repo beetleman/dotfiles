@@ -205,29 +205,27 @@ bar {
   workspace_buttons no
   tray_output none
   colors {
-    separator #666666
-    background #000000
-    statusline #ffffff
-    focused_workspace #551a8b #551a8b #ffffff
-    active_workspace #333333 #5f676a #ffffff
-    inactive_workspace #000000 #000000 #888888
-    urgent_workspace #2f343a #900000 #ffffff
+    separator #AAAAAA
+    background #1f2326
+    statusline #FFFFFF
+    focused_workspace #9FCA56 #9FCA56 #151718
+    active_workspace #DCCD69 #DCCD69 #151718
+    inactive_workspace #1f2326 #1f2326 #AAAAAA
+    urgent_workspace #CE4045 #CE4045 #FFFFFF
   }
 }
 
 bar {
-  #status_command ~/.virtualenvs/i3wm/bin/python -c "from py3status import main; main()" --config ~/.i3/i3status-bottom.conf
-
   position bottom
   id bar-bottom
   colors {
-    separator #666666
-    background #000000
-    statusline #ffffff
-    focused_workspace #551a8b #551a8b #ffffff
-    active_workspace #333333 #5f676a #ffffff
-    inactive_workspace #000000 #000000 #888888
-    urgent_workspace #2f343a #900000 #ffffff
+    separator #AAAAAA
+    background #1f2326
+    statusline #FFFFFF
+    focused_workspace #9FCA56 #9FCA56 #151718
+    active_workspace #DCCD69 #DCCD69 #151718
+    inactive_workspace #1f2326 #1f2326 #AAAAAA
+    urgent_workspace #CE4045 #CE4045 #FFFFFF
   }
 }
 
@@ -290,7 +288,7 @@ exec xset -dpms; xset s off
 exec xrdb -merge ~/.Xresources
 
 # color themes:
-client.focused #3b1261 #3b1261 #ffffff #662b9c
-client.focused_inactive #333333 #5f676a #ffffff #484e50
-client.unfocused #222222 #222222 #888888 #292d2e
-client.urgent #2f343a #900000 #ffffff #900000
+client.focused #CFCA40 #CFCA40 #151718 #9FCA56
+client.focused_inactive #9FCA56 #9FCA56 #151718 #A074C4
+client.unfocused #1f2326 #1f2326 #AAAAAA #A074C4
+client.urgent #CE4045 #CE4045 #FFFFFF #DCCD69
