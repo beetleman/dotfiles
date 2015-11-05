@@ -6,6 +6,7 @@ function install_conf {
 
 install_conf i3 .i3
 install_conf Xresources .Xresources
+install_conf git .gitconfig
 
 # install oh-my-shell
 install_conf zsh .oh-my-zsh
