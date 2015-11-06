@@ -45,7 +45,7 @@ ZSH_THEME="dst"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenvwrapper emacs nodejs python lein ssh-agent)
+plugins=(git emacs nodejs python lein ssh-agent)
 
 # User configuration
 
@@ -80,3 +80,13 @@ export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
 # vagrant
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
+
+# pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+if ! type pyenv | grep -q function; then # only once!
+    if [ -n "$commands[pyenv]" ] ; then
+        eval "$(pyenv init -)"
+        eval "$(pyenv virtualenv-init -)"
+        pyenv virtualenvwrapper_lazy
+    fi
+fi
