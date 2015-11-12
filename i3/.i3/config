@@ -288,7 +288,7 @@ exec xset -dpms; xset s off
 exec xrdb -merge ~/.Xresources
 
 # color themes:
-client.focused #CFCA40 #CFCA40 #151718 #9FCA56
+client.focused #D75FD7 #D75FD7 #151718 #9FCA56
 client.focused_inactive #9FCA56 #9FCA56 #151718 #A074C4
 client.unfocused #1f2326 #1f2326 #AAAAAA #A074C4
 client.urgent #CE4045 #CE4045 #FFFFFF #DCCD69
