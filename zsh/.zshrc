@@ -45,7 +45,7 @@ ZSH_THEME="dst"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git emacs nodejs python lein ssh-agent)
+plugins=(git emacs nodejs python lein ssh-agent docker docker-compose tmuxinator)
 
 # User configuration
 
@@ -75,6 +75,8 @@ export MC_SKIN=gotar
 # nodejs
 export NPM_PACKAGES="$HOME/.npm-packages"
 export PATH="$NPM_PACKAGES/bin:$PATH"
+
+unset MANPATH
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
@@ -90,3 +92,10 @@ if ! type pyenv | grep -q function; then # only once!
         pyenv virtualenvwrapper_lazy
     fi
 fi
+
+# rvm
+source ~/.rvm/scripts/rvm
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# heroku
+PATH="/usr/local/heroku/bin:$PATH"
