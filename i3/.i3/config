@@ -198,20 +198,20 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  status_command ~/.virtualenvs/i3wm/bin/python -c "from py3status import main; main()" --config ~/.i3/i3status-top.conf
+  status_command ~/.virtualenvs/i3wm/bin/py3status --config ~/.i3/i3status-top.conf
 
   position top
   id bar-top
   workspace_buttons no
   tray_output none
   colors {
-    separator #AAAAAA
-    background #1f2326
+    separator #888888
+    background #333333
     statusline #FFFFFF
-    focused_workspace #9FCA56 #9FCA56 #151718
-    active_workspace #DCCD69 #DCCD69 #151718
-    inactive_workspace #1f2326 #1f2326 #AAAAAA
-    urgent_workspace #CE4045 #CE4045 #FFFFFF
+    focused_workspace #4E9C00 #4E9C00 #FFFFFF
+    active_workspace #333333 #333333 #FFFFFF
+    inactive_workspace #333333 #333333 #888888
+    urgent_workspace #C20000 #C20000 #FFFFFF
   }
 }
 
@@ -219,13 +219,13 @@ bar {
   position bottom
   id bar-bottom
   colors {
-    separator #AAAAAA
-    background #1f2326
+    separator #888888
+    background #333333
     statusline #FFFFFF
-    focused_workspace #9FCA56 #9FCA56 #151718
-    active_workspace #DCCD69 #DCCD69 #151718
-    inactive_workspace #1f2326 #1f2326 #AAAAAA
-    urgent_workspace #CE4045 #CE4045 #FFFFFF
+    focused_workspace #4E9C00 #4E9C00 #FFFFFF
+    active_workspace #333333 #333333 #FFFFFF
+    inactive_workspace #333333 #333333 #888888
+    urgent_workspace #C20000 #C20000 #FFFFFF
   }
 }
 
@@ -288,7 +288,8 @@ exec xset -dpms; xset s off
 exec xrdb -merge ~/.Xresources
 
 # color themes:
-client.focused #D75FD7 #D75FD7 #151718 #9FCA56
-client.focused_inactive #9FCA56 #9FCA56 #151718 #A074C4
-client.unfocused #1f2326 #1f2326 #AAAAAA #A074C4
-client.urgent #CE4045 #CE4045 #FFFFFF #DCCD69
+
+client.focused #4E9C00 #4E9C00 #FFFFFF #FFFFFF
+client.focused_inactive #1B3600 #1B3600 #888888 #FFFFFF
+client.unfocused #333333 #333333 #888888 #FFFFFF
+client.urgent #C20000 #C20000 #FFFFFF #FFFFFF
