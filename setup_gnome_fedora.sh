@@ -17,3 +17,6 @@ dnf group install -y \
 curl http://folkswithhats.org/fedy-installer -o fedy-installer && \
     chmod +x fedy-installer && \
     ./fedy-installer
+
+
+bash ./install_configs.sh
