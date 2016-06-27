@@ -41,11 +41,12 @@ ZSH_THEME="dst"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git emacs nodejs python lein ssh-agent docker docker-compose tmuxinator)
+plugins=(git git-flow-avh emacs nodejs nvm python lein ssh-agent docker docker-compose tmuxinator virtualenvwrapper)
 
 # User configuration
 
@@ -72,30 +73,25 @@ export EDITOR='zile'
 # mc
 export MC_SKIN=gotar
 
-# nodejs
-export NPM_PACKAGES="$HOME/.npm-packages"
-export PATH="$NPM_PACKAGES/bin:$PATH"
-
-unset MANPATH
-export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-
-# vagrant
-export VAGRANT_DEFAULT_PROVIDER=virtualbox
-
-# pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-if ! type pyenv | grep -q function; then # only once!
-    if [ -n "$commands[pyenv]" ] ; then
-        eval "$(pyenv init -)"
-        eval "$(pyenv virtualenv-init -)"
-        pyenv virtualenvwrapper_lazy
-    fi
-fi
-
-# rvm
-source ~/.rvm/scripts/rvm
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 # heroku
 PATH="/usr/local/heroku/bin:$PATH"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# phantomjs
+export PATH="$HOME/opt/phantomjs/bin:$PATH"
+
+# boot (clojure)
+export BOOT_EMIT_TARGET=no
+
+# robomongo
+export PATH="$HOME/opt/robomongo/bin/:$PATH"
+
+# android
+export PATH="$HOME/opt/android-studio/bin/:$PATH"
+export JAVA_HOME=/usr/lib/jvm/java
+
+# nvm
+export NVM_DIR="/home/beetleman/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
