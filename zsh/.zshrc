@@ -5,7 +5,7 @@ export ZSH=/home/beetleman/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="dst"
+ZSH_THEME="avit"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -46,7 +46,7 @@ ZSH_THEME="dst"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow-avh emacs nodejs nvm python lein ssh-agent docker docker-compose tmuxinator virtualenvwrapper)
+plugins=(git git-flow-avh emacs nodejs nvm python lein ssh-agent docker docker-compose tmuxinator)
 
 # User configuration
 
@@ -73,6 +73,9 @@ export EDITOR='zile'
 # mc
 export MC_SKIN=gotar
 
+# my bin
+PATH="$HOME/bin:$PATH"
+
 # heroku
 PATH="/usr/local/heroku/bin:$PATH"
 
@@ -95,3 +98,15 @@ export JAVA_HOME=/usr/lib/jvm/java
 # nvm
 export NVM_DIR="/home/beetleman/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+if ! type pyenv | grep -q function; then # only once!
+    if [ -n "$commands[pyenv]" ] ; then
+        eval "$(pyenv init -)"
+        eval "$(pyenv virtualenv-init -)"
+    fi
+fi
+
+# avocode
+export PATH="$HOME/opt/avocode/:$PATH"
