@@ -5,7 +5,7 @@ export ZSH=/home/beetleman/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="avit"
+ZSH_THEME="candy"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -50,7 +50,9 @@ plugins=(git git-flow-avh emacs nodejs nvm python lein ssh-agent docker docker-c
 
 # User configuration
 
-source /etc/zshrc
+# source /etc/zprofile
+source /etc/zsh/zshrc
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -70,37 +72,27 @@ export EDITOR='zile'
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+export DISABLE_AUTO_TITLE='true'
+
+# xterm colors
+export TERM=xterm-256color
+
 # mc
 export MC_SKIN=gotar
 
 # my bin
-PATH="$HOME/bin:$PATH"
-
-# heroku
-PATH="/usr/local/heroku/bin:$PATH"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# phantomjs
-export PATH="$HOME/opt/phantomjs/bin:$PATH"
+PATH=$HOME/bin:$PATH
+PATH=$HOME/.local/bin:$PATH
 
 # boot (clojure)
 export BOOT_EMIT_TARGET=no
-
-# robomongo
-export PATH="$HOME/opt/robomongo/bin/:$PATH"
-
-# android
-export PATH="$HOME/opt/android-studio/bin/:$PATH"
-export JAVA_HOME=/usr/lib/jvm/java
 
 # nvm
 export NVM_DIR="/home/beetleman/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
+PATH=$HOME/.pyenv/bin:$PATH
 if ! type pyenv | grep -q function; then # only once!
     if [ -n "$commands[pyenv]" ] ; then
         eval "$(pyenv init -)"
@@ -108,5 +100,4 @@ if ! type pyenv | grep -q function; then # only once!
     fi
 fi
 
-# avocode
-export PATH="$HOME/opt/avocode/:$PATH"
+export PATH
