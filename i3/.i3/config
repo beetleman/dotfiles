@@ -46,7 +46,8 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvtc
 
 # start editor
 bindsym $mod+shift+Return exec $editor
@@ -55,7 +56,7 @@ bindsym $mod+shift+Return exec $editor
 bindsym $mod+Shift+q kill
 
 # lock session
-bindsym $mod+Ctrl+l exec i3lock -c cccccc
+bindsym $mod+Ctrl+l exec light-locker-command -l
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -198,7 +199,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  status_command ~/.virtualenvs/i3wm/bin/py3status --config ~/.i3/i3status-top.conf
+  status_command py3status --config ~/.i3/i3status-top.conf
 
   position top
   id bar-top
@@ -247,16 +248,11 @@ assign [class="Skype"] $08
 assign [class="Pidgin"] $08
 assign [title="Messenger"] $08
 
-assign [class="Quodlibet"] $10
-assign [class="Exfalso"] $10
 assign [class="Pavucontrol"] $10
-assign [class="Spotify"] $10
+assign [class="nuvolaplayer3-deezer"] $10
 
-for_window [class="mplayer2"] floating enable
 for_window [class="Vlc"] floating enable
-for_window [class="Kmix"] floating enable
-for_window [class="Smplayer"] floating enable
-for_window [class="Exfalso"] floating enable
+for_window [class="smplayer"] floating enable
 
 
 for_window [class="Firefox" instance="Browser"] floating enable
@@ -265,28 +261,29 @@ for_window [class="Firefox" instance="Extension"] floating enable
 for_window [class="Firefox" instance="Abp"] floating enable
 for_window [class="Firefox" instance="Febe"] floating enable
 
-for_window [class="Stjerm" instance="stjerm"] floating enable
+for_window [class="Main.py"] floating enable
 
 # Autostart:
 exec urxvtd -q -o
 exec dunst
 exec nm-applet
-exec firewall-applet
 exec feh --bg-scale $background
-exec /usr/libexec/lxpolkit
+exec lxpolkit
 exec xfce4-power-manager
 exec start-pulseaudio-x11 
 exec setxkbmap  pl
 exec parcellite
 exec skype
 exec thunderbird
-exec stjerm
-exec emacs --daemon
+exec guake
+exec ~/bin/emacs.sh
 exec xset -dpms; xset s off
 exec xrdb -merge ~/.Xresources
+exec light-locker
+exec sleep 2;nuvolaplayer3 -a deezer
 exec sleep 2;messengerfordesktop
 exec sleep 2;volumeicon
-
+exec compton -CG
 # color themes:
 
 client.focused #4E9C00 #4E9C00 #FFFFFF #FFFFFF
