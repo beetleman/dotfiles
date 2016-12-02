@@ -17,7 +17,7 @@ URxvt.cursorBlink: false
 URxvt.font: xft:Terminus:pixelsize=16
 ! URxvt*linespace: 0
 ! URxvt.skipBuiltinGlyphs: true
-URxvt.termname: urxvt
+URxvt*termName: rxvt-unicode
 URxvt.scrollBar: False
 URxvt.scrollTtyOutput: False
 URxvt.scrollTtyKeypress: True

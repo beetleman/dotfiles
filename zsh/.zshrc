@@ -75,7 +75,7 @@ export EDITOR='zile'
 export DISABLE_AUTO_TITLE='true'
 
 # xterm colors
-export TERM=xterm-256color
+export TERM=rxvt-unicode
 
 # mc
 export MC_SKIN=gotar
