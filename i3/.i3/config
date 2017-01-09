@@ -174,7 +174,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 # bindsym $mod+Shift+E exit
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3 and end your X session.' -b 'Yes, exit i3' 'i3-msg exit'" 
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3 and end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # bindsym $mod+Shift+E exec xfce4-session-logout
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -259,7 +259,7 @@ for_window [class="Firefox" instance="Dialog"] floating enable
 for_window [class="Firefox" instance="Extension"] floating enable
 for_window [class="Firefox" instance="Abp"] floating enable
 for_window [class="Firefox" instance="Febe"] floating enable
-for_window [class="VirtualBox"] floating enable
+# for_window [class="VirtualBox"] floating enable
 
 for_window [class="Main.py"] floating enable
 
@@ -270,7 +270,7 @@ exec nm-applet
 exec feh --bg-scale $background
 exec lxpolkit
 exec xfce4-power-manager
-exec start-pulseaudio-x11 
+exec start-pulseaudio-x11
 exec setxkbmap  pl
 exec parcellite
 exec skype

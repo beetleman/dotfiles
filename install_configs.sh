@@ -6,10 +6,11 @@ function install_conf {
 
 install_conf i3 .i3
 install_conf Xresources .Xresources
+install_conf Xresources .Xresources.themes
 
 # git
 install_conf git .gitconfig
-install_conf git .gitconfig_global
+install_conf git .gitignore_global
 
 # install oh-my-shell
 install_conf zsh .oh-my-zsh
