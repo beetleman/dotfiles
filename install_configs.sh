@@ -5,8 +5,12 @@ function install_conf {
 }
 
 install_conf i3 .i3
+
 install_conf Xresources .Xresources
 install_conf Xresources .Xresources.themes
+
+install_conf spacemacs .spacemacs
+
 
 # git
 install_conf git .gitconfig
