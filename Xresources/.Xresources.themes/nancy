@@ -64,10 +64,10 @@ URxvt.colorUL:        #ff8f00
 URxvt.fadeColor:      #000016
 URxvt.borderColor:    #1b1d1e
 URxvt.underlineColor: #de5105
-URxvt.cursorColor:    #e5e5e5
-URxvt.cursorColor2:   #201526
-URxvt.pointerColor:   #252525
-URxvt.pointerColor2:  #201526
+! URxvt.cursorColor:    #e5e5e5
+! URxvt.cursorColor2:   #201526
+! URxvt.pointerColor:   #252525
+! URxvt.pointerColor2:  #201526
 
 URxvt.color0:         #1b1d1e
 URxvt.color1:         #f92672
