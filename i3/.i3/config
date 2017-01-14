@@ -215,7 +215,7 @@ bindsym $mod+r mode "resize"
 # }
 
 bar {
-  status_command py3status --config ~/.i3/i3status-top.conf
+  status_command ~/.local/bin/py3status --config ~/.i3/i3status-top.conf
   position bottom
   id bar-bottom
   colors {
@@ -283,6 +283,7 @@ exec light-locker
 exec sleep 2;nuvolaplayer3 -a deezer
 exec sleep 2;messengerfordesktop
 exec sleep 2;volumeicon
+exec compton  --config ~/.config/compton.conf
 
 # color themes:
 

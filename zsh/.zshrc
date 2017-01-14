@@ -51,7 +51,7 @@ plugins=(git git-flow-avh emacs nodejs nvm python lein ssh-agent docker docker-c
 # User configuration
 
 # source /etc/zprofile
-source /etc/zsh/zshrc
+source /etc/zshrc
 
 source $ZSH/oh-my-zsh.sh
 
