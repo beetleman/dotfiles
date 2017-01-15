@@ -19,3 +19,4 @@ install_conf git .gitignore_global
 # install oh-my-shell
 install_conf zsh .oh-my-zsh
 install_conf zsh .zshrc
+install_conf zsh .zshenv
