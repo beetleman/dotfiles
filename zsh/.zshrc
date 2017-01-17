@@ -55,7 +55,7 @@ source /etc/zshrc
 
 source $ZSH/oh-my-zsh.sh
 
-
+export DISABLE_AUTO_TITLE='true'
 
 # The following lines were added by compinstall
 
@@ -65,3 +65,18 @@ zstyle :compinstall filename '/home/beetleman/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+# pyenv
+PATH=$HOME/.pyenv/bin:$PATH
+if ! type pyenv | grep -q function; then # only once!
+    if [ -n "$commands[pyenv]" ] ; then
+        eval "$(pyenv init -)"
+        eval "$(pyenv virtualenv-init -)"
+    fi
+fi
+
+# nvm
+export NVM_DIR="/home/beetleman/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH

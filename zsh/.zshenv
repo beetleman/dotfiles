@@ -29,20 +29,7 @@ PATH=$HOME/.local/bin:$PATH
 # boot (clojure)
 export BOOT_EMIT_TARGET=no
 
-# nvm
-export NVM_DIR="/home/beetleman/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 #screend
 PATH=$HOME/.screenlayout/:$PATH
-
-# pyenv
-PATH=$HOME/.pyenv/bin:$PATH
-if ! type pyenv | grep -q function; then # only once!
-    if [ -n "$commands[pyenv]" ] ; then
-        eval "$(pyenv init -)"
-        eval "$(pyenv virtualenv-init -)"
-    fi
-fi
 
 export PATH
