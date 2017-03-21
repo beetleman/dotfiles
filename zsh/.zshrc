@@ -46,25 +46,18 @@ ZSH_THEME="candy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow-avh emacs nodejs nvm python lein ssh-agent docker docker-compose tmuxinator)
+
+plugins=(git nvm emacs nodejs python lein ssh-agent docker-compose)
 
 # User configuration
 
+
 # source /etc/zprofile
-source /etc/zshrc
+source /etc/zsh/zshrc
 
 source $ZSH/oh-my-zsh.sh
 
 export DISABLE_AUTO_TITLE='true'
-
-# The following lines were added by compinstall
-
-zstyle ':completion:*' completer _complete _ignored
-zstyle :compinstall filename '/home/beetleman/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
 
 # pyenv
 PATH=$HOME/.pyenv/bin:$PATH
@@ -75,8 +68,5 @@ if ! type pyenv | grep -q function; then # only once!
     fi
 fi
 
-# nvm
-export NVM_DIR="/home/beetleman/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
+PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 export PATH
