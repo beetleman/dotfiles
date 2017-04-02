@@ -50,7 +50,7 @@ ZSH_THEME="candy"
 plugins=(git nvm emacs nodejs python lein ssh-agent docker-compose)
 
 # User configuration
-
+export TERM="st-256color"
 
 # source /etc/zprofile
 source /etc/zsh/zshrc
