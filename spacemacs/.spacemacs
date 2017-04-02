@@ -46,6 +46,7 @@ values."
      git
      markdown
      org
+     ranger
      (shell variables
             shell-default-shell 'term
             shell-default-height 30
@@ -66,7 +67,9 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(editorconfig
-                                      ample-theme
+                                      solidity-mode
+                                      ujelly-theme
+                                      tao-theme
                                       leuven-theme)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -139,7 +142,9 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(ample
+   dotspacemacs-themes '(ujelly
+                         tao-yin
+                         tao-yang
                          leuven
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
@@ -259,7 +264,7 @@ values."
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
-   dotspacemacs-smooth-scrolling t
+   dotspacemacs-smooth-scrolling nil
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
@@ -277,7 +282,7 @@ values."
    ;; Select a scope to highlight delimiters. Possible values are `any',
    ;; `current', `all' or `nil'. Default is `all' (highlight any scope and
    ;; emphasis the current one). (default 'all)
-   dotspacemacs-highlight-delimiters 'all
+   dotspacemacs-highlight-delimiters 'current
    ;; If non nil, advise quit functions to keep server open when quitting.
    ;; (default nil)
    dotspacemacs-persistent-server nil
