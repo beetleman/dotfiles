@@ -271,6 +271,8 @@ for_window [class="VirtualBox"] floating enable
 
 for_window [class="Main.py"] floating enable
 
+for_window [window_role="pop-up"] floating enable
+
 # Autostart:
 exec dunst
 exec nm-applet
