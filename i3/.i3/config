@@ -294,6 +294,7 @@ exec sleep 2;messengerfordesktop
 exec sleep 2;volumeicon
 exec keepass2
 exec compton  --config ~/.config/compton.conf
+exec redshift-gtk
 
 # color themes:
 
