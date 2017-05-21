@@ -1,3 +1,5 @@
 .python-version
 .tern-port
 .vscode
+.eggs
+tmuxp-dev.yml
