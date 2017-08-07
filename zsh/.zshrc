@@ -69,4 +69,11 @@ if ! type pyenv | grep -q function; then # only once!
 fi
 
 PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
+
+
+export ANDROID_HOME=~/Android/Sdk
+PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+
+PATH="$HOME/.cargo/bin:$PATH"
+
 export PATH

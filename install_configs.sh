@@ -4,19 +4,15 @@ function install_conf {
     ln -s `pwd`/$1/$2 ~/
 }
 
-install_conf i3 .i3
+rm ~/.config/i3 -rf
+ln -s `pwd`/i3 ~/.config/i3
 
 install_conf Xresources .Xresources
 install_conf Xresources .Xresources.themes
 
-install_conf spacemacs .spacemacs
-
+rm ~/.config/compton.conf -rf
+ln -s `pwd`/compton.conf ~/.config/compton.conf
 
 # git
 install_conf git .gitconfig
 install_conf git .gitignore_global
-
-# install oh-my-shell
-install_conf zsh .oh-my-zsh
-install_conf zsh .zshrc
-install_conf zsh .zshenv

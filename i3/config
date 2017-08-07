@@ -241,7 +241,7 @@ assign [class="Slack"] $08
 assign [class="Pidgin"] $08
 assign [title="Messenger"] $08
 
-assign [class="KeePass2"] $18
+assign [class="keepassxc"] $18
 
 for_window [class="Vlc"] floating enable
 for_window [class="smplayer"] floating enable
@@ -261,7 +261,6 @@ for_window [window_role="pop-up"] floating enable
 
 # Autostart
 exec --no-startup-id xfsettingsd --sm-client-disable
-exec --no-startup-id ~/bin/emacs-daemon.sh
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -272,10 +271,10 @@ exec --no-startup-id messengerfordesktop
 exec --no-startup-id blueman-applet
 exec --no-startup-id owncloud-client
 exec --no-startup-id guake
-exec --no-startup-id xset -dpms; xset s off
 exec --no-startup-id xrdb -merge ~/.Xresources
-exec --no-startup-id sleep 2;volumeicon
-exec --no-startup-id keepass2
+exec --no-startup-id setxkbmap -layout "pl,pl"
+exec --no-startup-id volumeicon
+exec --no-startup-id KeePassXC
 exec --no-startup-id compton  --config ~/.config/compton.conf
 exec --no-startup-id redshift-gtk
 exec --no-startup-id light-locker
