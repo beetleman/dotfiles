@@ -8,8 +8,8 @@ Xft.rgba: rgb
 
 !===========URxvt============
 
-!URxvt*transparent: true
-
+URxvt.transparent:   true
+URxvt.shading:       20
 ! fade out if not focused
 URxvt.fading: 20
 URxvt.cursorBlink: false

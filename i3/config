@@ -61,9 +61,8 @@ bindsym $mod+shift+Return exec $editor
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run
-bindsym $mod+Shift+d exec rofi -show window
+# start unwersal launcher/searcher
+bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi"
 
 # lock session
 bindsym $mod+Ctrl+l exec light-locker-command -l
@@ -213,7 +212,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   status_command ~/.local/bin/py3status --config ~/.config/i3/py3status.conf
-        tray_output primary
+  tray_output primary
+  position top
   colors {
     separator #AAAAAA
     background #1f2326
@@ -254,6 +254,8 @@ for_window [class="Firefox" instance="Extension"] floating enable
 
 for_window [class="VirtualBox"] floating enable
 
+for_window [class="Nitrogen"] floating enable
+
 # guake
 for_window [class="Main.py"] floating enable
 
@@ -278,6 +280,7 @@ exec --no-startup-id KeePassXC
 exec --no-startup-id compton  --config ~/.config/compton.conf
 exec --no-startup-id redshift-gtk
 exec --no-startup-id light-locker
+exec --no-startup-id nitrogen --restore
 exec sleep 4; i3-msg restart
 
 client.focused #4F99D3 #4F99D3 #151718 #9FCA56
