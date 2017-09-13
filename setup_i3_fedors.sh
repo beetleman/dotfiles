@@ -8,7 +8,8 @@ sudo dnf install -y i3 i3lock i3status dmenu dunst lxpolkit \
      firewall-applet volumeicon network-manager-applet guake feh blueman\
      thunar scrot rxvt-unicode-256color \
      lightdm-gtk-greeter-settings lightdm-gtk lightdm \
-     system-switch-displaymanager
+     numix-gtk-theme numix-icon-theme \
+     system-switch-displaymanager arandr
 
 sudo dnf copr enable yaroslav/i3desktop
 sudo dnf install rofi -y

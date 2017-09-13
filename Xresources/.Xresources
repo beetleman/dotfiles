@@ -11,15 +11,11 @@ Xft.rgba: rgb
 !URxvt*transparent: true
 
 ! fade out if not focused
-! URxvt.fading: 20
+URxvt.fading: 20
 URxvt.cursorBlink: false
 ! run "fc-list" for a list of available fonts
-URxvt.font: xft:Terminus:pixelsize=16
-! URxvt.font: xft:Source Code Pro:size=10
-! URxvt.boldFont: xft:Source Code Pro:bold:size=10
-! URxvt.letterSpace: -1
-! URxvt*linespace: 0
-! URxvt.skipBuiltinGlyphs: true
+URxvt.font: xft:Fantasque Sans Mono:size=12
+URxvt*linespace: 5
 URxvt*termName: rxvt-unicode
 URxvt.scrollBar: False
 URxvt.scrollTtyOutput: False
@@ -32,16 +28,6 @@ URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 URxvt.underlineURLs: true
-
-!! Stjerm
-stjerm.key:                 grave
-stjerm.mod:                 windows
-stjerm.font:                Terminus 12
-stjerm.height:              40%
-stjerm.width:               95%
-stjerm.tabpos:              top
-stjerm.showtab:             always
-stjerm.border:              thin
 
 ! Colour scheme
 #include ".Xresources.themes/nancy"
