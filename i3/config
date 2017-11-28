@@ -53,7 +53,8 @@ font pango:Fantasque Sans Mono 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec /usr/bin/urxvt256c
 
 # start editor
 bindsym $mod+shift+Return exec $editor
@@ -226,8 +227,8 @@ bar {
 }
 
 # frame with titlebar only if needed:
-new_window pixel 3
-new_float pixel 3
+new_window pixel 4
+new_float pixel 4
 
 # easy way t back to previous workspace
 workspace_auto_back_and_forth yes
@@ -262,11 +263,15 @@ for_window [class="Main.py"] floating enable
 for_window [window_role="pop-up"] floating enable
 
 # Autostart
-exec --no-startup-id xfsettingsd --sm-client-disable
-exec --no-startup-id dunst
+exec --no-startup-id xfsettingsd replace
+exec --no-startup-id /usr/libexec/xfce-polkit
+# exec --no-startup-id dunst
+exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id nm-applet
+exec --no-startup-id firewall-applet
+exec --no-startup-id seapplet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id parcellite
+exec --no-startup-id xfce4-clipman
 exec --no-startup-id skype
 exec --no-startup-id slack
 exec --no-startup-id messengerfordesktop

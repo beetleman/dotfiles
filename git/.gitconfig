@@ -9,3 +9,5 @@
 	tool = meld
 [core]
 	excludesfile = /home/beetleman/.gitignore_global
+[magit]
+	hideCampaign = true
