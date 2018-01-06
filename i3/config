@@ -278,7 +278,7 @@ exec --no-startup-id messengerfordesktop
 exec --no-startup-id owncloud-client
 exec --no-startup-id guake
 exec --no-startup-id xrdb -merge ~/.Xresources
-exec --no-startup-id setxkbmap -layout "pl,pl"
+exec --no-startup-id setxkbmap -layout "pl,pl" -option ctrl:nocaps
 exec --no-startup-id sleep 2; volumeicon
 exec --no-startup-id KeePassXC
 exec --no-startup-id compton  --config ~/.config/compton.conf
