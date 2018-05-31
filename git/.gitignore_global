@@ -3,3 +3,4 @@
 .vscode
 .eggs
 tmuxp-dev.yml
+.dir-locals.el
