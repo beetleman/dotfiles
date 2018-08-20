@@ -53,8 +53,8 @@ font pango:Fantasque Sans Mono 11
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec /usr/bin/urxvt256c
+bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec /usr/bin/urxvt256c
 
 # start editor
 bindsym $mod+shift+Return exec $editor
@@ -66,7 +66,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi"
 
 # lock session
-bindsym $mod+Ctrl+l exec light-locker-command -l
+bindsym $mod+Ctrl+l exec xflock4
 
 # screenshot
 bindsym --release Print exec --no-startup-id $screenshot
@@ -212,7 +212,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  status_command ~/.local/bin/py3status --config ~/.config/i3/py3status.conf
+  status_command py3status --config ~/.config/i3/py3status.conf
   tray_output primary
   position top
   colors {
@@ -237,12 +237,8 @@ workspace_auto_back_and_forth yes
 
 assign [class="Thunderbird"] $09
 
-assign [class="Skype"] $08
 assign [class="Slack"] $08
-assign [class="Pidgin"] $08
-assign [title="Messenger"] $08
-
-assign [class="keepassxc"] $18
+assign [class="Zoom"] $08
 
 for_window [class="vlc"] floating enable
 for_window [class="smplayer"] floating enable
@@ -264,28 +260,27 @@ for_window [window_role="pop-up"] floating enable
 
 # Autostart
 exec --no-startup-id xfsettingsd replace
-exec --no-startup-id /usr/libexec/xfce-polkit
-# exec --no-startup-id dunst
-exec --no-startup-id start-pulseaudio-x11
-exec --no-startup-id nm-applet
-exec --no-startup-id firewall-applet
-exec --no-startup-id seapplet
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id xfce4-clipman
-exec --no-startup-id skype
-exec --no-startup-id slack
-exec --no-startup-id messengerfordesktop
-exec --no-startup-id owncloud-client
-exec --no-startup-id guake
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id setxkbmap -layout "pl,pl" -option ctrl:nocaps
-exec --no-startup-id sleep 2; volumeicon
-exec --no-startup-id KeePassXC
 exec --no-startup-id compton  --config ~/.config/compton.conf
-exec --no-startup-id redshift-gtk
-exec --no-startup-id light-locker
 exec --no-startup-id nitrogen --restore
-exec sleep 4; i3-msg restart
+exec --no-startup-id xfce4-clipman
+
+exec --no-startup-id exo-open /etc/xdg/autostart/blueman.desktop
+exec --no-startup-id exo-open /etc/xdg/autostart/pamac-tray.desktop
+exec --no-startup-id exo-open /etc/xdg/autostart/nm-applet.desktop
+exec --no-startup-id exo-open /etc/xdg/autostart/pulseaudio.desktop
+exec --no-startup-id exo-open /etc/xdg/autostart/geoclue-demo-agent.desktop
+exec --no-startup-id exo-open /etc/xdg/autostart/light-locker.desktop
+
+exec --no-startup-id exo-open /etc/xdg/autostart/xfce4-power-manager.desktop
+exec --no-startup-id exo-open /etc/xdg/autostart/xfce-polkit-gnome-authentication-agent-1.desktop
+
+exec --no-startup-id exo-open /etc/xdg/autostart/gnome-keyring-pkcs11.desktop
+exec --no-startup-id exo-open /etc/xdg/autostart/gnome-keyring-secrets.desktop
+exec --no-startup-id exo-open /etc/xdg/autostart/gnome-keyring-ssh.desktop
+
+exec --no-startup-id sleep 2; volumeicon
 
 client.focused #00b0ef #00b0ef #141414 #ff7066
 client.focused_inactive #141414 #141414 #00b0ef #472b2a
