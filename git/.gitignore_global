@@ -4,3 +4,5 @@
 .eggs
 tmuxp-dev.yml
 .dir-locals.el
+jsconfig.json
+.directory
