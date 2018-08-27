@@ -262,6 +262,7 @@ for_window [class="Steam"] floating enable
 for_window [class="Main.py"] floating enable
 
 for_window [window_role="pop-up"] floating enable
+for_window [class="VirtualBox Machine"] floating disable
 
 # Autostart
 exec --no-startup-id xfsettingsd replace
