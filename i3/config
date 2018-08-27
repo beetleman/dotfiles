@@ -5,6 +5,34 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+# theme:
+# https://github.com/khamer/base16-i3/blob/master/themes/base16-grayscale-dark.config
+set $base00 #101010
+set $base01 #252525
+set $base02 #464646
+set $base03 #525252
+set $base04 #ababab
+set $base05 #b9b9b9
+set $base06 #e3e3e3
+set $base07 #f7f7f7
+set $base08 #7c7c7c
+set $base09 #999999
+set $base0A #a0a0a0
+set $base0B #8e8e8e
+set $base0C #868686
+set $base0D #686868
+set $base0E #747474
+set $base0F #5e5e5e
+
+# Basic color configuration using the Base16 variables for windows and borders.
+# Property Name         Border  BG      Text    Indicator Child Border
+client.focused          $base05 $base0D $base00 $base07   $base0D
+client.focused_inactive $base01 $base01 $base05 $base03   $base01
+client.unfocused        $base01 $base00 $base05 $base01   $base01
+client.urgent           $base08 $base08 $base00 $base08   $base08
+client.placeholder      $base00 $base00 $base05 $base00   $base00
+client.background       $base07
+
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -216,13 +244,15 @@ bar {
   tray_output primary
   position top
   colors {
-    separator #7d7d7d
-    background #141414
-    statusline #00b0ef
-    focused_workspace #00b0ef #141414 #00b0ef
-    active_workspace #141414 #141414 #00b0ef
-    inactive_workspace #141414 #141414 #7d7d7d
-    urgent_workspace #ff7066 #141414 #ff7066
+    background $base00
+    separator  $base01
+    statusline $base04
+    # state             Border  BG      Text
+    focused_workspace   $base05 $base0D $base00
+    active_workspace    $base05 $base03 $base00
+    inactive_workspace  $base03 $base01 $base05
+    urgent_workspace    $base08 $base08 $base00
+    binding_mode        $base00 $base0A $base00
   }
 }
 
@@ -287,8 +317,3 @@ exec --no-startup-id exo-open /etc/xdg/autostart/gnome-keyring-secrets.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/gnome-keyring-ssh.desktop
 
 exec --no-startup-id sleep 2; volumeicon
-
-client.focused #00b0ef #00b0ef #141414 #ff7066
-client.focused_inactive #141414 #141414 #00b0ef #472b2a
-client.unfocused #141414 #141414 #7d7d7d #141414
-client.urgent #ff7066 #ff7066 #141414 #ff7066
