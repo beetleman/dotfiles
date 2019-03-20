@@ -33,6 +33,8 @@ set $01 1: doc/web
 
 # from my https://github.com/beetleman/.emacs.d
 set $editor ~/.emacs.d/bin/emacs.sh
+set $screenshot xfce4-screenshooter
+set $terminal xfce4-terminal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -53,8 +55,9 @@ font pango:Fantasque Sans Mono 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-# bindsym $mod+Return exec /usr/bin/urxvt256c
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec $terminal
+bindsym $mod+grave exec xfce4-terminal --drop-down
 
 # start editor
 bindsym $mod+shift+Return exec $editor
@@ -66,7 +69,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi -show-icons"
 
 # lock session
-bindsym $mod+Ctrl+l exec xflock4
+bindsym $mod+Ctrl+l exec light-locker-command --lock
 
 # screenshot
 bindsym --release Print exec --no-startup-id $screenshot
@@ -220,6 +223,7 @@ bindsym $mod+r mode "resize"
 bar {
   status_command py3status --config ~/.config/i3/py3status.conf
   tray_output primary
+  i3bar_command i3bar -t
   position top
   colors {
     separator #928374
@@ -235,6 +239,9 @@ bar {
 # frame with titlebar only if needed:
 new_window pixel 4
 new_float pixel 4
+
+# do not follow focus
+focus_follows_mouse no
 
 # easy way t back to previous workspace
 workspace_auto_back_and_forth yes
@@ -260,8 +267,6 @@ for_window [class="Firefox" instance="Extension"] floating enable
 
 for_window [class="VirtualBox"] floating enable
 
-for_window [class="Nitrogen"] floating enable
-
 for_window [class="keepassxc"] floating enable
 for_window [class="Steam"] floating enable
 # guake
@@ -273,22 +278,21 @@ for_window [class="VirtualBox Machine"] floating disable
 for_window [class="Peek"] floating enable
 
 # Autostart
-exec --no-startup-id xfsettingsd replace
+# exec --no-startup-id xfsettingsd --replace
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id setxkbmap -layout "pl,pl" -option ctrl:nocaps
 exec --no-startup-id compton  --config ~/.config/compton.conf
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id ~/.fehbg
 exec --no-startup-id xfce4-clipman
 
-exec --no-startup-id exo-open /etc/xdg/autostart/blueman.desktop
-exec --no-startup-id exo-open /etc/xdg/autostart/pamac-tray.desktop
+exec --no-startup-id exo-open /etc/xdg/autostart/blueberry-tray.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/nm-applet.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/pulseaudio.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/geoclue-demo-agent.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/light-locker.desktop
 
 exec --no-startup-id exo-open /etc/xdg/autostart/xfce4-power-manager.desktop
-exec --no-startup-id exo-open /etc/xdg/autostart/xfce-polkit-gnome-authentication-agent-1.desktop
+exec --no-startup-id exo-open /etc/xdg/autostart/xfce-polkit.desktop
 
 exec --no-startup-id exo-open /etc/xdg/autostart/gnome-keyring-pkcs11.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/gnome-keyring-secrets.desktop
