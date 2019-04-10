@@ -32,7 +32,7 @@ set $01 1: doc/web
 
 
 # from my https://github.com/beetleman/.emacs.d
-set $editor ~/.emacs.d/bin/emacs.sh
+set $editor ~/.emacs.d/bin/emacs.fish
 set $screenshot xfce4-screenshooter
 set $terminal xfce4-terminal
 
@@ -69,7 +69,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi -show-icons"
 
 # lock session
-bindsym $mod+Ctrl+l exec light-locker-command --lock
+bindsym $mod+Ctrl+l exec /home/beetleman/bin/screen-lock
 
 # screenshot
 bindsym --release Print exec --no-startup-id $screenshot
@@ -192,6 +192,11 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
+# Sound volume
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -223,16 +228,16 @@ bindsym $mod+r mode "resize"
 bar {
   status_command py3status --config ~/.config/i3/py3status.conf
   tray_output primary
-  i3bar_command i3bar -t
+  i3bar_command i3bar
   position top
   colors {
-    separator #928374
-    background #282828
-    statusline #ebdbb2
-    focused_workspace #B8BB26 #B8BB26 #282828
-    active_workspace #1d2021 #1d2021 #928374
-    inactive_workspace #32302f #32302f #928374
-    urgent_workspace #fb4933 #fb4933 #ebdbb2
+    separator #7d7d7d
+    background #141414
+    statusline #00b0ef
+    focused_workspace #00b0ef #141414 #00b0ef #1d1f21
+    active_workspace #141414 #141414 #00b0ef #ffffff
+    inactive_workspace #141414 #141414 #7d7d7d #969896
+    urgent_workspace #ff7066 #141414 #ff7066 #ffffff
   }
 }
 
@@ -256,9 +261,6 @@ for_window [class="zoom"] floating enable
 for_window [class="vlc"] floating enable
 for_window [class="smplayer"] floating enable
 
-for_window [class="Pamac-manager"] floating enable
-for_window [class="Pamac-updater"] floating enable
-
 for_window [class="Pavucontrol"] floating enable
 
 for_window [class="Firefox" instance="Browser"] floating enable
@@ -269,8 +271,6 @@ for_window [class="VirtualBox"] floating enable
 
 for_window [class="keepassxc"] floating enable
 for_window [class="Steam"] floating enable
-# guake
-for_window [class="Main.py"] floating enable
 
 for_window [window_role="pop-up"] floating enable
 for_window [class="VirtualBox Machine"] floating disable
@@ -282,26 +282,25 @@ for_window [class="Peek"] floating enable
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id setxkbmap -layout "pl,pl" -option ctrl:nocaps
 exec --no-startup-id compton  --config ~/.config/compton.conf
-exec --no-startup-id ~/.fehbg
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id xfce4-clipman
+exec --no-startup-id nm-applet
 
 exec --no-startup-id exo-open /etc/xdg/autostart/blueberry-tray.desktop
-exec --no-startup-id exo-open /etc/xdg/autostart/nm-applet.desktop
-exec --no-startup-id exo-open /etc/xdg/autostart/pulseaudio.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/geoclue-demo-agent.desktop
-exec --no-startup-id exo-open /etc/xdg/autostart/light-locker.desktop
-
 exec --no-startup-id exo-open /etc/xdg/autostart/xfce4-power-manager.desktop
-exec --no-startup-id exo-open /etc/xdg/autostart/xfce-polkit.desktop
 
+exec --no-startup-id exo-open /etc/xdg/autostart/print-applet.desktop
+
+exec --no-startup-id exo-open /etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/gnome-keyring-pkcs11.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/gnome-keyring-secrets.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/gnome-keyring-ssh.desktop
 
-exec --no-startup-id sleep 2; volumeicon
+exec --no-startup-id sleep 2; pasystray
 exec --no-startup-id sleep 2; redshift-gtk
 
-client.focused #B8BB26 #B8BB26 #282828 #282828
-client.focused_inactive #1d2021 #1d2021 #928374 #282828
-client.unfocused #32302f #32302f #928374 #282828
-client.urgent #fb4933 #fb4933 #ebdbb2 #282828
+client.focused #00b0ef #00b0ef #141414 #ff7066
+client.focused_inactive #141414 #141414 #00b0ef #472b2a
+client.unfocused #141414 #141414 #7d7d7d #141414
+client.urgent #ff7066 #ff7066 #141414 #ff7066
