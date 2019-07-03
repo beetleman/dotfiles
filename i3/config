@@ -173,7 +173,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # lock session
-bindsym $mod+Ctrl+l exec xflock4
+bindsym $mod+Ctrl+l exec ~/bin/screen-lock
 
 # screenshot
 bindsym --release Print exec --no-startup-id $screenshot
@@ -282,16 +282,16 @@ bar {
   i3bar_command i3bar
   position top
   colors {
-    separator #928374
-    background #282828
-    statusline #ebdbb2
-    focused_workspace #689d6a #689d6a #282828
-    active_workspace #1d2021 #1d2021 #928374
-    inactive_workspace #32302f #32302f #928374
-    urgent_workspace #cc241d #cc241d #ebdbb2
+    separator #dc322f
+    background #002b36
+    statusline #268bd2
+    focused_workspace #fdf6e3 #859900 #fdf6e3 #282828
+    active_workspace #fdf6e3 #6c71c4 #fdf6e3 #928374
+    inactive_workspace #586e75 #93a1a1 #002b36 #928374
+    urgent_workspace #d33682 #d33682 #fdf6e3 #ebdbb2
   }
 }
-client.focused #689d6a #689d6a #282828 #282828
-client.focused_inactive #1d2021 #1d2021 #928374 #282828
-client.unfocused #32302f #32302f #928374 #282828
-client.urgent #cc241d #cc241d #ebdbb2 #282828
+client.focused #859900 #859900 #fdf6e3 #6c71c4
+client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
+client.unfocused #073642 #073642 #93a1a1 #586e75
+client.urgent #d33682 #d33682 #fdf6e3 #dc322f
