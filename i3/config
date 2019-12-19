@@ -13,7 +13,7 @@ set $mod Mod4
 
 # from my https://github.com/beetleman/.emacs.d
 set $editor ~/.emacs.d/bin/emacs.fish
-set $screenshot xfce4-screenshooter
+set $screenshot mate-screenshot
 set $terminal xfce4-terminal
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -265,12 +265,14 @@ for_window [class="Peek"] floating enable
 # exec --no-startup-id xfsettingsd --replace
 # exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id setxkbmap -layout "pl,pl" -option ctrl:nocaps
-exec --no-startup-id compton  --config ~/.config/compton.conf
+exec --no-startup-id picom  --config ~/.config/picom.conf
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
 
+exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd # hack
 exec --no-startup-id exo-open /etc/xdg/autostart/blueberry-tray.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/geoclue-demo-agent.desktop
+exec --no-startup-id exo-open /etc/xdg/autostart/xfce4-screensaver.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/xfce4-power-manager.desktop
 
 exec --no-startup-id exo-open /etc/xdg/autostart/print-applet.desktop
@@ -280,6 +282,7 @@ exec --no-startup-id exo-open /etc/xdg/autostart/gnome-keyring-pkcs11.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/gnome-keyring-secrets.desktop
 exec --no-startup-id exo-open /etc/xdg/autostart/gnome-keyring-ssh.desktop
 
+exec --no-startup-id exo-open /etc/xdg/autostart/parcellite-startup.desktop
 exec --no-startup-id sleep 2; pasystray
 exec --no-startup-id sleep 2; redshift-gtk
 
@@ -292,16 +295,16 @@ bar {
   i3bar_command i3bar
   position top
   colors {
-    separator #dc322f
-    background #002b36
-    statusline #268bd2
-    focused_workspace #fdf6e3 #859900 #fdf6e3 #282828
-    active_workspace #fdf6e3 #6c71c4 #fdf6e3 #928374
-    inactive_workspace #586e75 #93a1a1 #002b36 #928374
-    urgent_workspace #d33682 #d33682 #fdf6e3 #ebdbb2
+    separator #666666
+    background #000000
+    statusline #ffffff
+    focused_workspace #4c7899 #285577 #ffffff #222222
+    active_workspace #333333 #5f676a #ffffff #bbbbbb
+    inactive_workspace #333333 #222222 #888888 #bbbbbb
+    urgent_workspace #2f343a #900000 #ffffff #ffffff
   }
 }
-client.focused #859900 #859900 #fdf6e3 #6c71c4
-client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
-client.unfocused #073642 #073642 #93a1a1 #586e75
-client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+client.focused #4c7899 #285577 #ffffff #2e9ef4
+client.focused_inactive #333333 #5f676a #ffffff #484e50
+client.unfocused #333333 #222222 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000

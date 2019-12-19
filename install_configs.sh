@@ -10,8 +10,8 @@ ln -s `pwd`/i3 ~/.config/i3
 install_conf Xresources .Xresources
 install_conf Xresources .Xresources.themes
 
-rm ~/.config/compton.conf -rf
-ln -s `pwd`/compton.conf ~/.config/compton.conf
+rm ~/.config/picom.conf -rf
+ln -s `pwd`/picom.conf ~/.config/picom.conf
 
 # git
 install_conf git .gitconfig
