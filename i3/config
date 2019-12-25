@@ -106,17 +106,17 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: doc/web"
-set $ws2 "2: emacs"
-set $ws3 "3: preview/web"
-set $ws4 "4: terminals"
+set $ws1 "1: &#xf02d;"
+set $ws2 "2: &#xf121;"
+set $ws3 "3: &#xf06e;"
+set $ws4 "4: &#xf120;"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8: im"
-set $ws9 "9: mail"
+set $ws8 "8: &#xf086;"
+set $ws9 "9: &#xf0e0;"
 set $ws11 "11"
-set $ws10 "10: media"
+set $ws10 "10: &#xf025;"
 set $ws12 "12"
 set $ws13 "13"
 set $ws14 "14"
@@ -248,6 +248,7 @@ for_window [class="vlc"] floating enable
 
 for_window [class="smplayer"] floating enable
 for_window [class="evolution-alarm-notify"] floating enable
+for_window [class="KeePassXC"] floating enable
 
 for_window [class="Pavucontrol"] floating enable
 
@@ -294,6 +295,7 @@ exec --no-startup-id sleep 2; /usr/lib/goa-daemon --replace
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+  font pango:IBM Plex Mono, Awesome 8
   status_command py3status --config ~/.config/i3/py3status.conf
   tray_output primary
   i3bar_command i3bar
